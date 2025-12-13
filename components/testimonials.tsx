@@ -1,7 +1,8 @@
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { type ComponentProps } from 'react';
-import Marquee from 'react-fast-marquee';
+import { Marquee } from './extends/marquee';
+// import Marquee from 'react-fast-marquee';
 
 const testimonials = [
   {
@@ -60,6 +61,9 @@ const testimonials = [
   },
 ];
 
+const firstRow = testimonials.slice(0, testimonials.length / 2);
+const secondRow = testimonials.slice(testimonials.length / 2);
+
 const Testimonials = () => (
   <div className='min-h-screen flex justify-center items-center py-12'>
     <div className='h-full w-full'>
@@ -69,7 +73,23 @@ const Testimonials = () => (
       <p className='mt-3 text-center text-muted-foreground text-xl'>
         Real stories from people who use and love our product every day
       </p>
-      <div className='mt-14 relative space-y-8'>
+
+      <div className='relative flex w-full flex-col items-center justify-center overflow-hidden'>
+        <Marquee pauseOnHover className='[--duration:20s]'>
+          {firstRow.map((review) => (
+            <TestimonialList key={review.id} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover className='[--duration:20s]'>
+          {secondRow.map((review) => (
+            <TestimonialList key={review.id} />
+          ))}
+        </Marquee>
+        <div className='from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r'></div>
+        <div className='from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l'></div>
+      </div>
+
+      {/* <div className='mt-14 relative space-y-8'>
         <div className='z-10 absolute left-0 inset-y-0 w-[15%] bg-linear-to-r from-background to-transparent h-full' />
         <div className='z-10 absolute right-0 inset-y-0 w-[15%] bg-linear-to-l from-background to-transparent h-full' />
         <Marquee direction='left'>
@@ -82,7 +102,7 @@ const Testimonials = () => (
             <TestimonialList />
           </div>
         </Marquee>
-      </div>
+      </div> */}
     </div>
   </div>
 );

@@ -24,13 +24,14 @@ export default function CTABanner() {
             'inset-x-0 inset-y-0 h-[200%] skew-y-12'
           )}
         />
-        <div className='relative z-0 flex flex-col gap-3'>
+        <div className='relative z-0 flex flex-col gap-3 text-center'>
           <h3 className='text-3xl md:text-4xl font-semibold'>
-            Ready to Elevate Your Experience?
+            Are You Ready to Transform Your Financial Journey?
           </h3>
-          <p className='mt-2 text-base md:text-lg'>
-            Take your workflow to the next level with Shadcn UI Blocks. Sign up
-            today and start exploring!
+          <p className='mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed'>
+            Let&apos;s transform your financial future together. Get a
+            personalized investment strategy tailored to your goals and risk
+            comfort in just one conversation.
           </p>
         </div>
         <div className='relative z-0 mt-14 flex flex-col sm:flex-row items-center justify-center gap-4'>

@@ -20,7 +20,7 @@ export default function Calculators() {
         <div className='mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {calculators.map((calculator) => (
             <Card key={calculator.title} className=''>
-              <CardHeader>
+              <CardHeader className={'text-center'}>
                 <div className='mb-4 size-12 mx-auto flex items-center justify-center bg-accent rounded-full'>
                   <calculator.icon className='size-6' />
                 </div>

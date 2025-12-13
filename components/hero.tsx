@@ -2,7 +2,7 @@ import { BackgroundPattern } from '@/components/extends/background-pattern';
 import { Badge } from '@/components/ui/badge';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { ArrowUpRight, CirclePlay } from 'lucide-react';
-import { ShinyButton } from './extends/shiny-button';
+import Link from 'next/link';
 // import Link from "next/link";
 
 export default function Hero() {
@@ -22,15 +22,16 @@ export default function Hero() {
           </a>
         </Badge>
         <h1 className='mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl md:leading-[1.2] font-semibold tracking-tighter'>
-          Customized Shadcn UI Blocks & Components
+          Ascent Wealth <br /> Welcomes You!
         </h1>
         <p className='mt-6 md:text-lg text-foreground/80'>
-          Explore a collection of Shadcn UI blocks and components, ready to
-          preview and copy. Streamline your development workflow with
-          easy-to-implement examples.
+          Build your wealth with expert guidance. We offer mutual funds, bonds,
+          insurance, and personalized investment solutions tailored to help you
+          achieve your financial goals.
         </p>
         <div className='mt-12 flex items-center justify-center gap-4'>
-          <a
+          <Link
+            scroll={true}
             href='#planning'
             // size='lg'
             // className='rounded-full text-base'
@@ -39,8 +40,8 @@ export default function Hero() {
               className: 'rounded-full! text-base!',
             })}>
             Get Started <ArrowUpRight className='h-5! w-5!' />
-          </a>
-          <ShinyButton>Shiny Button</ShinyButton>
+          </Link>
+          {/* <ShinyButton>Shiny Button</ShinyButton> */}
           <Button
             variant='outline'
             size='lg'

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { cn } from '@/lib/utils';
 import dynamic from 'next/dynamic';
+import { Skeleton } from '../ui/skeleton';
 
 type Grid = {
   rows: number;
@@ -94,7 +95,7 @@ export const PixelImage = ({
   }, [rows, cols, maxAnimationDelay]);
 
   return (
-    <div className='relative h-full w-full select-none rounded-xl'>
+    <div className='relative h-full w-full select-none bg-muted rounded-xl'>
       {pieces.map((piece, index) => (
         <div
           key={index}
@@ -132,5 +133,10 @@ export const PixelImage = ({
 
 export const LazyPixelImage = dynamic(
   () => import('./pixel-image').then((mod) => mod.PixelImage),
-  { ssr: false }
+  {
+    ssr: false,
+    loading: () => (
+      <Skeleton className='w-full h-full aspect-4/3 basis-1/2 animate-pulse' />
+    ),
+  }
 );

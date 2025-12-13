@@ -4,9 +4,9 @@ import Contact from '@/components/contact';
 import CTABanner from '@/components/cta-banner';
 import { ScrollProgress } from '@/components/extends/scroll-progress';
 import FAQ from '@/components/faq';
-import Flows from '@/components/flows';
 import Hero from '@/components/hero';
 import LogoCloud from '@/components/logo-cloud';
+import Planning from '@/components/planning';
 import { MarqueeDemo } from '@/components/reviews';
 import Services from '@/components/services';
 import Stats from '@/components/stats';
@@ -17,17 +17,16 @@ export default function Home() {
     <main>
       <Hero />
       <Stats />
-      <Flows />
+      <Planning />
       <Services />
       <Blog />
       <Calculators />
       <CTABanner />
       <FAQ />
       <Testimonials />
+      <MarqueeDemo />
       <Contact />
       <LogoCloud />
-      <MarqueeDemo />
-
       <ScrollProgress />
     </main>
   );

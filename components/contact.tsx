@@ -1,4 +1,5 @@
 import { MailIcon, MapPinIcon, MessageCircle, PhoneIcon } from 'lucide-react';
+import Link from 'next/link';
 import ContactForm from './forms/contact-form';
 
 export default function Contact() {
@@ -27,11 +28,11 @@ export default function Contact() {
               <p className='my-2.5 text-muted-foreground'>
                 Our friendly team is here to help.
               </p>
-              <a
+              <Link
                 className='font-medium text-primary'
-                href='mailto:akashmoradiya3444@gmail.com'>
-                akashmoradiya3444@gmail.com
-              </a>
+                href='mailto:info@ascentwealth.in'>
+                info@ascentwealth.in
+              </Link>
             </div>
             <div>
               <div className='h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl'>
@@ -41,9 +42,12 @@ export default function Contact() {
               <p className='my-2.5 text-muted-foreground'>
                 Our friendly team is here to help.
               </p>
-              <a className='font-medium text-primary' href='#'>
+              <Link
+                target='_blank'
+                className='font-medium text-primary'
+                href='https://api.whatsapp.com/send/?phone=919841013668&text&type=phone_number&app_absent=0'>
                 Start new chat
-              </a>
+              </Link>
             </div>
             <div>
               <div className='h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl'>
@@ -53,12 +57,12 @@ export default function Contact() {
               <p className='my-2.5 text-muted-foreground'>
                 Come say hello at our office HQ.
               </p>
-              <a
+              <Link
                 className='font-medium text-primary'
-                href='https://map.google.com'
+                href='https://www.google.com/maps/place/Thoraipakkam,+Tamil+Nadu+600097/@13.5126456,79.7806643,103588m/data=!3m1!1e3!4m6!3m5!1s0x3a525cfbde1d0251:0xcafd9a078a3c9270!8m2!3d12.9416037!4d80.2362096!16s%2Fm%2F0287fjs?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D'
                 target='_blank'>
-                100 Smith Street Collingwood <br /> VIC 3066 AU
-              </a>
+                Thoraipakkam, Chennai, Tamilnadu <br /> 600097, India
+              </Link>
             </div>
             <div>
               <div className='h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl'>
@@ -68,11 +72,11 @@ export default function Contact() {
               <p className='my-2.5 text-muted-foreground'>
                 Mon-Fri from 8am to 5pm.
               </p>
-              <a
+              <Link
                 className='font-medium text-primary'
-                href='tel:akashmoradiya3444@gmail.com'>
-                +1 (555) 000-0000
-              </a>
+                href='tel:+917305953668'>
+                +91 7305953668
+              </Link>
             </div>
           </div>
 

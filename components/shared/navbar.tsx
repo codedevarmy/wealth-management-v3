@@ -1,5 +1,5 @@
 import { Logo } from '@/components/shared/logo';
-import { NavMenu } from '@/components/shared/nav-menu';
+import NavMenu from '@/components/shared/nav-menu';
 import { NavigationSheet } from '@/components/shared/navigation-sheet';
 import { buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
@@ -20,7 +20,8 @@ export default function Navbar() {
         <div className='flex items-center gap-3'>
           <ThemeModeToggle />
           <AnimatedThemeToggler />
-          <a
+          <Link
+            scroll={true}
             href='#contact-us'
             className={buttonVariants({
               variant: 'default',
@@ -28,7 +29,7 @@ export default function Navbar() {
               size: 'sm',
             })}>
             Get a quote
-          </a>
+          </Link>
 
           {/* Mobile Menu */}
           <div className='lg:hidden'>

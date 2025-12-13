@@ -68,7 +68,7 @@ const FAQ = () => {
 
   return (
     <div id='faqs' className='flex items-center justify-center px-6 py-12'>
-      <div className='w-full max-w-(--breakpoint-xl) mx-auto'>
+      <div className='w-full max-w-(--breakpoint-xl) mx-auto text-center'>
         <h2 className='text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-[-0.035em]'>
           Frequently Asked Questions
         </h2>
