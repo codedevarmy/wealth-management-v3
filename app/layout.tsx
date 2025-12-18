@@ -1,4 +1,4 @@
-import Footer from '@/components/shared/footer';
+import { HoverFooter } from '@/components/hover-footer';
 import Navbar from '@/components/shared/navbar';
 import { seo } from '@/constants';
 import { ThemeProvider } from '@/providers/theme-provider';
@@ -72,7 +72,7 @@ export default function RootLayout({
           disableTransitionOnChange>
           <Navbar />
           {children}
-          <Footer />
+          <HoverFooter />
         </ThemeProvider>
       </body>
     </html>

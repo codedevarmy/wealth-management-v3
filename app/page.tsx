@@ -11,14 +11,33 @@ import { MarqueeDemo } from '@/components/reviews';
 import Services from '@/components/services';
 import Stats from '@/components/stats';
 import Testimonials from '@/components/testimonials';
+import { MDXContent } from '@content-collections/mdx/react';
+import { allPosts } from 'content-collections';
+import Link from 'next/link';
 
 export default function Home() {
+  const posts = allPosts;
+  console.log('Posts:', posts);
   return (
     <main>
       <Hero />
       <Stats />
       <Planning />
       <Services />
+      <ul>
+        {allPosts.map((post) => (
+          <li key={post._meta.path}>
+            <Link
+              href={`/blogs/${post.title
+                .toLocaleLowerCase()
+                .replace(/\s+/g, '-')}`}>
+              <h3>{post.title}</h3>
+              <p>{post.summary}</p>
+              <MDXContent code={post.mdx} />
+            </Link>
+          </li>
+        ))}
+      </ul>
       <Blog />
       <Calculators />
       <CTABanner />

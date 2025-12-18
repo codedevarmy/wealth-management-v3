@@ -4,7 +4,7 @@ import { buttonVariants } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedThemeToggler } from '../extends/animated-theme-toggler';
-import { ThemeModeToggle } from './theme-mode-toggler';
+// import { ThemeModeToggle } from './theme-mode-toggler';
 
 export default function Navbar() {
   return (
@@ -24,7 +24,7 @@ export default function Navbar() {
         <NavMenu className='hidden lg:block' />
 
         <div className='flex items-center gap-3'>
-          <ThemeModeToggle />
+          {/* <ThemeModeToggle /> */}
           <AnimatedThemeToggler />
           <Link
             scroll={true}
