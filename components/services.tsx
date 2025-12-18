@@ -9,46 +9,7 @@ import {
 
 import { services } from '@/constants';
 import Image from 'next/image';
-import { Button } from './ui/button';
-
-// const services = [
-//   {
-//     icon: Goal,
-//     title: 'Identify Opportunities',
-//     description:
-//       'Easily uncover untapped areas to explore and expand your reach effortlessly.',
-//   },
-//   {
-//     icon: BookCheck,
-//     title: 'Build Authority',
-//     description:
-//       'Create valuable content that resonates, inspires trust, and positions you as an expert.',
-//   },
-//   {
-//     icon: ChartPie,
-//     title: 'Instant Insights',
-//     description:
-//       'Gain immediate, actionable insights with a quick glance, enabling fast decision-making.',
-//   },
-//   {
-//     icon: Users,
-//     title: 'Engage with Your Audience',
-//     description:
-//       'Boost audience engagement with interactive features like polls, quizzes, and forms.',
-//   },
-//   {
-//     icon: FolderSync,
-//     title: 'Automate Your Workflow',
-//     description:
-//       'Streamline your processes by automating repetitive tasks, saving time and reducing effort.',
-//   },
-//   {
-//     icon: Zap,
-//     title: 'Accelerate Growth',
-//     description:
-//       'Supercharge your growth by implementing strategies that drive results quickly and efficiently.',
-//   },
-// ];
+import ServiceDrawer from './service-drawer';
 
 export default function Services() {
   return (
@@ -72,7 +33,8 @@ export default function Services() {
   );
 }
 
-function ServiceCard({ title, description, cover }: (typeof services)[number]) {
+function ServiceCard(props: (typeof services)[number]) {
+  const { title, description, cover } = props;
   return (
     <Card
       key={title}
@@ -89,9 +51,7 @@ function ServiceCard({ title, description, cover }: (typeof services)[number]) {
       </CardHeader>
       <CardContent className='flex items-center'>
         <CardAction>
-          <Button variant={'link'} size={'sm'}>
-            Know more
-          </Button>
+          <ServiceDrawer {...props} />
         </CardAction>
       </CardContent>
       <CardContent className='mt-auto px-0 pb-0'>
