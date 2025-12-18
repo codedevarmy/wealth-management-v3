@@ -26,16 +26,19 @@ export default function Navbar() {
         <div className='flex items-center gap-3'>
           {/* <ThemeModeToggle /> */}
           <AnimatedThemeToggler />
-          <Link
-            scroll={true}
-            href='#contact-us'
-            className={buttonVariants({
-              variant: 'default',
-              className: 'rounded-full!',
-              size: 'sm',
-            })}>
-            Get a quote
-          </Link>
+
+          <div className={'hidden lg:block'}>
+            <Link
+              scroll={true}
+              href='#contact-us'
+              className={buttonVariants({
+                variant: 'default',
+                className: 'rounded-full!',
+                size: 'sm',
+              })}>
+              Get a quote
+            </Link>
+          </div>
 
           {/* Mobile Menu */}
           <div className='lg:hidden'>
