@@ -1,6 +1,25 @@
 import { consultationTypes } from '@/constants';
 import { z } from 'zod';
 
+export const contactFormSchema = z.object({
+  firstName: z
+    .string()
+    .min(1, 'First name is required')
+    .max(100, 'First name is too long'),
+  lastName: z
+    .string()
+    .min(1, 'Last name is required')
+    .max(100, 'Last name is too long'),
+  email: z.email('Invalid email address'),
+  message: z
+    .string()
+    .min(1, 'Message is required')
+    .max(500, 'Message is too long'),
+  acceptTerms: z
+    .boolean()
+    .refine((val) => val === true, 'You must accept the terms and conditions'),
+});
+
 export const consultationSchema = z.object({
   fullName: z.string().min(2, 'Full name required'),
   email: z.email('Invalid email address'),
@@ -29,8 +48,6 @@ export const consultationSchema = z.object({
       message: 'You must agree to the terms and conditions',
     }),
 });
-
-export type ConsultationFormValues = z.infer<typeof consultationSchema>;
 
 // Calculator schemas
 export const commonCalculatorSchema = z.object({
@@ -143,3 +160,6 @@ export type SIPCalculatorValues = z.infer<typeof sipSchema>;
 export type RetirementCalculatorValues = z.infer<typeof retirementSchema>;
 export type WeddingCalculatorValues = z.infer<typeof weddingSchema>;
 export type VacationCalculatorValues = z.infer<typeof vacationSchema>;
+
+export type ContactFormData = z.infer<typeof contactFormSchema>;
+export type ConsultationFormValues = z.infer<typeof consultationSchema>;

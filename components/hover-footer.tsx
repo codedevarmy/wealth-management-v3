@@ -10,7 +10,7 @@ import { Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { Fragment } from 'react/jsx-runtime';
 import FooterBackgroundGradient from './extends/footer-background-gradient';
-import TextHoverEffect from './extends/text-hover-effect';
+import { LazyTextHoverEffect } from './extends/lazy-components';
 import { Separator } from './ui/separator';
 
 // Footer link data
@@ -325,7 +325,7 @@ export function HoverFooter() {
 
       {/* Text hover effect */}
       <div className=''>
-        <TextHoverEffect text='Ascent Wealth' className='z-50' />
+        <LazyTextHoverEffect text='Ascent Wealth' className='z-50' />
       </div>
 
       <FooterBackgroundGradient />
