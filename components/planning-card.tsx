@@ -27,7 +27,7 @@ export default function PlanningCard({
       <div className='w-full h-full aspect-4/3 bg-mutedd rounded-xl border border-border/50 basis-1/2'>
         <LazyPixelImage
           ref={ref}
-          src='https://magicui.design/pixel-image-demo.jpg'
+          src={plan.image}
           customGrid={{ rows: 8, cols: 8 }}
           grayscaleAnimation
           inView={inView}

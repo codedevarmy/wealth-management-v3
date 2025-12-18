@@ -244,6 +244,7 @@ export const plannings = [
     details:
       "Ready to take control of your financial future? We help you transform dreams into actionable plans—whether it's buying a home, funding education, or retiring comfortably. Let's design a personalized strategy that works for your life.",
     tutorialLink: '#free-consultation',
+    image: '/assets/2.jpg',
   },
   {
     id: crypto.randomUUID(),
@@ -252,6 +253,7 @@ export const plannings = [
     details:
       "Every rupee you invest should have a purpose. We guide you to set clear financial goals, understand your risk appetite, and choose investments that align with your timeline and needs. Because smart investing starts with knowing what you're working towards.",
     tutorialLink: '#free-consultation',
+    image: '/assets/4.jpg',
   },
   {
     id: crypto.randomUUID(),
@@ -260,6 +262,7 @@ export const plannings = [
     details:
       "Feeling uncertain about the right investment moves? Our personalized risk profiling takes the guesswork out of the equation. We help you find that sweet spot between your goals, your comfort level, and what's realistic for your situation. No jargon, just clarity.",
     tutorialLink: '#free-consultation',
+    image: '/assets/8.jpg',
   },
 ];
 

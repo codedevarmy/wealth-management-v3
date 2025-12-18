@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { cn } from '@/lib/utils';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { Skeleton } from '../ui/skeleton';
 
 type Grid = {
@@ -224,8 +225,7 @@ export const PixelImage = ({
             transitionDelay: `${piece.delay}ms`,
             transitionDuration: `${pixelFadeInDuration}ms`,
           }}>
-          {/*  eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={src}
             alt={`Pixel image piece ${index + 1}`}
             className={cn(
@@ -239,6 +239,8 @@ export const PixelImage = ({
                 ? `filter ${pixelFadeInDuration}ms cubic-bezier(0.4, 0, 0.2, 1)`
                 : 'none',
             }}
+            width={1200}
+            height={900}
             draggable={false}
           />
         </div>
