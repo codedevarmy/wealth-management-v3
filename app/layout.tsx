@@ -1,4 +1,5 @@
 import { HoverFooter } from '@/components/hover-footer';
+import { DevtoolsBlocker } from '@/components/shared/devtools-blocker';
 import Navbar from '@/components/shared/navbar';
 import { seo } from '@/constants';
 import { ThemeProvider } from '@/providers/theme-provider';
@@ -70,6 +71,7 @@ export default function RootLayout({
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange>
+          <DevtoolsBlocker />
           <Navbar />
           {children}
           <HoverFooter />
