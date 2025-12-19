@@ -1,6 +1,7 @@
 import { HoverFooter } from '@/components/hover-footer';
 import { DevtoolsBlocker } from '@/components/shared/devtools-blocker';
 import Navbar from '@/components/shared/navbar';
+import { Toaster } from '@/components/ui/sonner';
 import { seo } from '@/constants';
 import { ThemeProvider } from '@/providers/theme-provider';
 import type { Metadata } from 'next';
@@ -57,6 +58,8 @@ export const metadata: Metadata = {
   classification: 'Business',
 };
 
+const isDev = process.env.NODE_ENV === 'development';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -71,10 +74,11 @@ export default function RootLayout({
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange>
-          <DevtoolsBlocker />
+          {!isDev ? <DevtoolsBlocker /> : null}
           <Navbar />
           {children}
           <HoverFooter />
+          <Toaster richColors closeButton />
         </ThemeProvider>
       </body>
     </html>

@@ -1,5 +1,3 @@
-'use client';
-
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
@@ -10,15 +8,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
-import { useRef } from 'react';
+import { CarouselDemo } from './carousel-demo';
 
 export default function Blog() {
   return (
@@ -51,7 +41,7 @@ export default function Blog() {
   );
 }
 
-function BlogCard({ i }: { i: number }) {
+export function BlogCard({ i }: { i: number }) {
   return (
     <Card key={i} className='shadow-none py-0 gap-3'>
       <CardHeader className='p-2 pb-0'>
@@ -73,35 +63,5 @@ function BlogCard({ i }: { i: number }) {
         </div>
       </CardContent>
     </Card>
-  );
-}
-
-export function CarouselDemo() {
-  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
-
-  return (
-    <Carousel
-      plugins={[plugin.current]}
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
-      className='w-full'>
-      <CarouselContent className='-ml-1'>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className='md:basis-1/2 lg:basis-1/3'>
-            <div className='p-1'>
-              <Card>
-                <CardContent
-                // className='flex aspect-square items-center justify-center p-6'
-                >
-                  <BlogCard i={index} />
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
   );
 }
