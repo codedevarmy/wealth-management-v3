@@ -1,6 +1,6 @@
 'use server';
 
-import jsonData from '@/docs/data-20251219223035.json';
+import jsonData from '@/data/data-20251219223035.json';
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { generateObject } from 'ai';
 import fs from 'fs';

@@ -1,7 +1,7 @@
 'use server';
 
 import { PostValues } from '@/content-collections';
-import jsonData from '@/docs/data-20251219223035.json';
+import jsonData from '@/data/data-20251219223035.json';
 import axios from 'axios';
 import fs from 'fs/promises';
 import path from 'path';
