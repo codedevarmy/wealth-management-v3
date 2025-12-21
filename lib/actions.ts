@@ -10,7 +10,11 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export async function downloadImageAxios(urls: string[]): Promise<void> {
+export async function downloadImageAxios(
+  urls: string[],
+  name: string,
+  filePath: string
+): Promise<void> {
   try {
     for (const url of urls) {
       const i = urls.indexOf(url);
@@ -24,13 +28,13 @@ export async function downloadImageAxios(urls: string[]): Promise<void> {
 
       const fileExt = url.split('.').pop()?.split('?')[0];
       // console.log('File extension:', fileExt);
-      const fileName = `blog_cover_${i + 1}.${fileExt}`;
+      const fileName = `${name}_${i + 1}.${fileExt}`;
 
       const imageSavePath = path.join(
         process.cwd(),
         'public',
         'images',
-        'blogs',
+        filePath,
         fileName
       ); // Replace with your desired file path
       // const savePath = path.resolve(__dirname, 'axios_image.png'); // Replace with your desired file path
