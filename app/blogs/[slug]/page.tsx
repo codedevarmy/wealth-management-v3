@@ -32,13 +32,36 @@ export async function generateMetadata(
   }
 
   // optionally access and extend (rather than replace) parent metadata
-  const previousImages = (await parent).openGraph?.images || [];
+  // const previousImages = (await parent).openGraph?.images || [];
+  const parentInfo = await parent;
 
   return {
     title: post.title,
     description: post.summary,
+    keywords: post.categories,
+    creator: post.author,
     openGraph: {
-      images: ['/some-specific-page-image.jpg', ...previousImages],
+      determiner: parentInfo.openGraph?.determiner,
+      title: post.title,
+      description: post.summary,
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_BASE_URL}/${post.image}`,
+          width: 1200,
+          height: 630,
+          alt: 'Ascent Wealth',
+        },
+      ],
+      phoneNumbers: parentInfo.openGraph?.phoneNumbers,
+      emails: parentInfo.openGraph?.emails,
+      siteName: parentInfo.openGraph?.siteName,
+      locale: parentInfo.openGraph?.locale,
+      alternateLocale: parentInfo.openGraph?.alternateLocale,
+      type: 'article',
+      videos: parentInfo.openGraph?.videos,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${post.slug}`,
+      countryName: parentInfo.openGraph?.countryName,
+      ttl: parentInfo.openGraph?.ttl,
     },
   };
 }
