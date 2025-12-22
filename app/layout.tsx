@@ -82,7 +82,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <HoverFooter />
-          <Toaster richColors closeButton />
+          <Toaster richColors closeButton position='top-center' />
         </ThemeProvider>
       </body>
     </html>

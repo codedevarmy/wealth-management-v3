@@ -1,15 +1,19 @@
 'use client';
 
-import { ContactFormData, contactFormSchema } from '@/lib/zod.schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { IconReload } from '@tabler/icons-react';
 import Link from 'next/link';
+import { useTransition } from 'react';
 import {
   Controller,
   SubmitErrorHandler,
   SubmitHandler,
   useForm,
 } from 'react-hook-form';
+import { toast } from 'sonner';
+
+import { type ContactFormData, contactFormSchema } from '@/lib/zod.schemas';
+
 import { Button } from '../ui/button';
 import {
   Card,
@@ -33,7 +37,14 @@ import { Textarea } from '../ui/textarea';
 
 const isDev = process.env.NODE_ENV === 'development';
 
+type APIResponse = {
+  success: boolean;
+  message: string;
+  data: ContactFormData | null;
+};
+
 export default function ContactForm() {
+  const [isPending, startTransition] = useTransition();
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -47,11 +58,50 @@ export default function ContactForm() {
   });
 
   const onError: SubmitErrorHandler<ContactFormData> = (errors) => {
-    console.log('Form errors:', errors);
+    // console.log('Form errors:', errors);
+    Object.entries(errors).forEach(([fieldName, error]) => {
+      // You can customize this to show errors next to each field if desired
+      toast.error(`Please fix the errors in the form.`, {
+        description: `Error in ${fieldName}: ${
+          error?.message ?? 'Invalid inputs.'
+        }`,
+      });
+    });
   };
 
   const onSubmit: SubmitHandler<ContactFormData> = (data) => {
-    console.log('Form submitted successfully:', data);
+    // console.log('Form submitted successfully:', data);
+    const accessKey = process.env.NEXT_PUBLIC_WEB3_ACCESS_KEY;
+    if (!accessKey) {
+      throw new Error('Missing WEB_3_ACCESS_KEY environment variable');
+    }
+
+    const formData = new FormData();
+
+    Object.entries(data).forEach(([key, value]) => {
+      formData.append(key, String(value));
+    });
+    formData.append('access_key', accessKey);
+
+    startTransition(async () => {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = (await response.json()) as APIResponse;
+      // console.log('Response from Web3Forms:', data);
+      if (data.success) {
+        toast.success('Success', {
+          description: 'Your Query Submitted Successfully',
+        });
+        form.reset();
+      } else {
+        toast.error('Error', {
+          description:
+            data.message || 'There was an error submitting the form.',
+        });
+      }
+    });
   };
 
   return (
@@ -262,8 +312,8 @@ export default function ContactForm() {
               </div> */}
               </FieldGroup>
             </FieldSet>
-            <Button className='mt-6 w-full' size='lg'>
-              Submit
+            <Button disabled={isPending} className='mt-6 w-full' size='lg'>
+              {isPending ? 'Sending...' : 'Send Message'}
             </Button>
           </form>
         </CardContent>
