@@ -295,8 +295,9 @@ export const services = [
       `Associated with leading Health Insurance companies and with our customer centric approach for the satisfaction and smiles of our clients we stretch ourselves and go beyond the ordinary whenever they face medical challenges.We assist clients with good health insurance cover that gives peace of mind and the freedom to protect from the ever increasing medical costs.
       Consider Ascent Wealth as your trusted insurance advisor for your Life and Healt Insurance requirements for protection and financial security.`,
     ],
-    cover:
-      'https://www.ascentwealth.in/Content/ascentwealth.in/UploadedImage/RealImage/507insurance.jpg',
+    cover: '/images/services/507insurance.jpg',
+    // cover:
+    //   'https://www.ascentwealth.in/Content/ascentwealth.in/UploadedImage/RealImage/507insurance.jpg',
     quote: `""Luck is the flip side of risk. You cannot understand one without appreciating the other" - Morgan Housel`,
   },
   {
@@ -310,8 +311,9 @@ export const services = [
       While we strive to reduce risks for our investors, we also strive to provide diversity, active credit risk management, and liquidity.
       We thank you for your trust in Ascent Wealth for your fixed income requirements.`,
     ],
-    cover:
-      'https://www.ascentwealth.in/Content/ascentwealth.in/UploadedImage/RealImage/301eqa.jpg',
+    cover: '/images/services/301eqa.jpg',
+    // cover:
+    //   'https://www.ascentwealth.in/Content/ascentwealth.in/UploadedImage/RealImage/301eqa.jpg',
     quote: `"When it's obvious that the goals cannot be reached, don't adjust the goals, adjust the action steps" - Confucius`,
   },
   {
@@ -327,8 +329,9 @@ export const services = [
       `Significant life events may also compel you to make changes to your plan. It’s important to regularly review your plan to ensure it continues to meet your needs and objectives.`,
       `"Ultimately the decisions you make about your estate are yours alone".`,
     ],
-    cover:
-      'https://www.ascentwealth.in/Content/ascentwealth.in/UploadedImage/RealImage/729eee.jpg',
+    cover: '/images/services/729eee.jpg',
+    // cover:
+    //   'https://www.ascentwealth.in/Content/ascentwealth.in/UploadedImage/RealImage/729eee.jpg',
     quote: `"It's not how much money you make but how much money you can keep, how hard it works for you and how many generations you keep it for" - Robert Kiyosaki`,
   },
   {
@@ -344,8 +347,9 @@ export const services = [
       `Historically, Investments in equities has offered higher real returns compared to fixed income products. Hence, it is seen as good hedge against inflation.`,
       `Ascent Wealth assists clients with onboarding into a trading platform, completing KYC requirements, offering trading platform training, and effectively and quickly resolving difficulties that may arise.`,
     ],
-    cover:
-      'https://www.ascentwealth.in/Content/ascentwealth.in/UploadedImage/RealImage/384eq.jpg',
+    cover: '/images/services/384eq.jpg',
+    // cover:
+    //   'https://www.ascentwealth.in/Content/ascentwealth.in/UploadedImage/RealImage/384eq.jpg',
     quote: `"The single greatest challenge you face as an investor is handling the truth about yourself" - Jason Zweig`,
   },
   {
@@ -359,8 +363,9 @@ export const services = [
       `While we discuss about discipline in investments, it is also equally or more important to steadily invest for a considerably long term to achieve the desired results or outcome. That’s why goal-based investments assume significance will deliver better results.`,
       `Ascent Wealth helps clients with varying risk profiles accomplish their medium to long-term wealth creation goals.`,
     ],
-    cover:
-      'https://www.ascentwealth.in/Content/ascentwealth.in/UploadedImage/RealImage/664goalf.jpg',
+    cover: '/images/services/664goalf.jpg',
+    // cover:
+    //   'https://www.ascentwealth.in/Content/ascentwealth.in/UploadedImage/RealImage/664goalf.jpg',
     quote: `"The best decisions draw on the dual strength of your investing brain: intuition and analysis. Feeling and thinking." - Jason Zweig`,
   },
 ];

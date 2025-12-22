@@ -1,4 +1,5 @@
 import { services } from '@/constants';
+import { getLocalImage } from '@/lib/plaiceholder';
 import Image from 'next/image';
 import SpotlightCard from './extends/spotlight-card';
 import ServiceDrawer from './service-drawer';
@@ -11,14 +12,19 @@ import {
   CardTitle,
 } from './ui/card';
 
-export default function ServiceCard(props: (typeof services)[number]) {
+export default async function ServiceCard(props: (typeof services)[number]) {
   const { title, description, cover } = props;
+
+  const { base64 } = await getLocalImage(cover);
+
   return (
     <SpotlightCard
       key={title}
-      className='p-0! rounded-none! border-none! bg-transparent!'
+      className='p-0! rounded-lg! border-none! bg-transparent!'
       // spotlightColor='rgba(0, 229, 255, 0.2)'
-      spotlightColor='rgba(83, 68, 5, 1)'>
+      spotlightColor='rgba(173, 156, 82, 0.5)'
+      // spotlightColor='rgba(83, 68, 5, 1)'
+    >
       <Card className='flex flex-col border rounded-xl overflow-hidden shadow-none pb-0'>
         <CardHeader>
           <CardTitle>
@@ -43,6 +49,8 @@ export default function ServiceCard(props: (typeof services)[number]) {
               width={400}
               height={160}
               className='h-full w-full object-cover rounded-tl-xl hover:scale-105 transition-transform duration-300'
+              placeholder='blur'
+              blurDataURL={base64}
             />
           </div>
         </CardContent>
