@@ -12,7 +12,8 @@ import {
 } from '@/components/ui/dialog';
 import { ShadCNShinyButton } from './extends/shadcn-shiny-btn';
 
-import Image from 'next/image';
+// import Image from 'next/image';
+import CloudinaryImage from './shared/cloudinary-loader';
 
 export default function LocationDialog() {
   return (
@@ -36,7 +37,13 @@ export default function LocationDialog() {
           </DialogDescription>
         </DialogHeader>
         <div className='w-(--radix-dialog-content-width)! mx-auto'>
-          <Image
+          <CloudinaryImage
+            src='business-location_x7pl9i.avif'
+            width={600}
+            quality={80}
+            priority={true}
+          />
+          {/* <Image
             src={
               'https://res.cloudinary.com/dxgckfhti/image/upload/v1768549237/business-location_x7pl9i.avif'
             }
@@ -45,7 +52,7 @@ export default function LocationDialog() {
             height={400}
             className='w-(--radix-dialog-content-width)! mx-auto h-full rounded-md'
             loading='lazy'
-          />
+          /> */}
         </div>
         <DialogFooter>
           <DialogClose asChild>

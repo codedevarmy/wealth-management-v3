@@ -45,8 +45,8 @@ export function BlogCarousel() {
   // }, []);
 
   // const isSmall = useMediaQuery('(min-width: 640px)');
-  const isDesktop = useMediaQuery('(min-width: 768px)');
-  const isLarge = useMediaQuery('(min-width: 1024px)');
+  const isDesktop = useMediaQuery('(min-width: 1280px)');
+  const isLarge = useMediaQuery('(min-width: 1536px)');
 
   // const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
   //   api,

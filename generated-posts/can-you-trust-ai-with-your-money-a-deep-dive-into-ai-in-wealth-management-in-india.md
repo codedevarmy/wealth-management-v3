@@ -6,7 +6,7 @@ categories:
   - 'Financial Planning'
   - 'Fintech'
 createdAt: '2025-08-29T13:59:31.124Z'
-image: '/images/blogs/blog_cover_52.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552164/blog_cover_52_czchgz.jpg'
 slug: 'can-you-trust-ai-with-your-money-a-deep-dive-into-ai-in-wealth-management-in-india'
 summary: "Remember the last time you went to a bank or a financial advisor? It was a very human experience, wasn't it?"
 title: 'Can You Trust AI with Your Money? A Deep Dive into AI in Wealth Management in India'

@@ -6,7 +6,7 @@ categories:
   - 'Behavioral Finance'
   - 'Investment Strategy'
 createdAt: '2024-07-04T08:12:00.000Z'
-image: '/images/blogs/blog_cover_40.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552161/blog_cover_40_bh7dhe.png'
 slug: 'avoiding-the-hype-why-mutual-funds-beat-impulse-investing'
 summary: '## The Dangers of FOMO Investing'
 title: 'Avoiding the Hype: Why Mutual Funds Beat Impulse Investing'

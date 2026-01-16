@@ -5,7 +5,7 @@ categories:
   - 'SIP'
   - 'Lumpsum'
 createdAt: '2024-07-04T07:43:30.000Z'
-image: '/images/blogs/blog_cover_4.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552136/blog_cover_4_g5ay0n.jpg'
 slug: 'sip-vs-lumpsum-choosing-the-right-fuel-for-your-mutual-fund-investment-journey'
 summary: 'The world of mutual funds offers exciting opportunities for wealth creation, but a crucial question arises at the outset: How do you invest your money? Two main strategies dominate: the Systematic Investment Plan (SIP) and the lumpsum investment.'
 title: 'SIP vs. Lumpsum: Choosing the Right Fuel for Your Mutual Fund Investment Journey'

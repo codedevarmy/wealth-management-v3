@@ -6,7 +6,7 @@ categories:
   - 'Saving'
   - 'Investing'
 createdAt: '2024-07-04T08:08:00.000Z'
-image: '/images/blogs/blog_cover_36.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552170/blog_cover_36_h9c545.png'
 slug: 'how-to-beat-lifestyle-inflation-and-build-lasting-wealth'
 summary: '## Understanding Lifestyle Inflation'
 title: 'How to Beat Lifestyle Inflation and Build Lasting Wealth'

@@ -6,7 +6,7 @@ categories:
   - 'Risk Management'
   - 'Behavioral Finance'
 createdAt: '2024-07-04T08:11:00.000Z'
-image: '/images/blogs/blog_cover_39.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552159/blog_cover_39_ogizxw.png'
 slug: 'the-danger-of-chasing-high-returns-why-balanced-investing-wins'
 summary: 'Many investors are driven by the desire to earn the highest possible returns in the shortest amount of time. The thrill of quick profits or market rallies often pushes individuals to pursue high-return investments without fully understanding the risks involved.'
 title: 'The Danger of Chasing High Returns: Why Balanced Investing Wins'

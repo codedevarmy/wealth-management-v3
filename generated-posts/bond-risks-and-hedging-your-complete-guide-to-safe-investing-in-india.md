@@ -6,7 +6,7 @@ categories:
   - 'Risk Management'
   - 'Financial Planning'
 createdAt: '2025-08-29T13:59:31.123Z'
-image: '/images/blogs/blog_cover_51.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552172/blog_cover_51_cppqsc.jpg'
 slug: 'bond-risks-and-hedging-your-complete-guide-to-safe-investing-in-india'
 summary: '## Understanding Bond Risks and How to Hedge Them'
 title: 'Bond Risks and Hedging: Your Complete Guide to Safe Investing in India'

@@ -5,7 +5,7 @@ categories:
   - 'Adulting'
   - 'Financial Planning'
 createdAt: '2024-07-04T07:48:50.000Z'
-image: '/images/blogs/blog_cover_12.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552144/blog_cover_12_uvuy1n.jpg'
 slug: 'from-college-grad-to-adulting-your-guide-to-getting-health-insurance'
 summary: "Congratulations, recent graduates! You've finally crossed the stage, diploma in hand, ready to take on the world."
 title: 'From College Grad to Adulting: Your Guide to Getting Health Insurance'

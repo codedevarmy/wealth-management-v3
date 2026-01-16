@@ -4,7 +4,7 @@ categories:
   - 'Investing'
   - 'Market Cap'
 createdAt: '2025-08-02T08:47:28.001Z'
-image: '/images/blogs/blog_cover_47.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552162/blog_cover_47_u0it2e.png'
 slug: 'risk-vs-reward-finding-the-right-balance-in-your-investment-portfolio'
 summary: "Every investment journey is a unique dance between risk and reward. On one side, there's the allure of higher returns, often accompanied by greater uncertainty."
 title: 'Risk vs Reward: Finding the Right Balance in Your Investment Portfolio'

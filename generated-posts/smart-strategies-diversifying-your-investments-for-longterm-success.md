@@ -4,7 +4,7 @@ categories:
   - 'Investing'
   - 'Market Cap'
 createdAt: '2025-08-02T08:47:28.000Z'
-image: '/images/blogs/blog_cover_46.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552171/blog_cover_46_hhuqy5.png'
 slug: 'smart-strategies-diversifying-your-investments-for-longterm-success'
 summary: "Have you ever heard the old adage about not putting all your eggs in one basket? It's a timeless piece of wisdom that applies perfectly to the world of investing."
 title: 'Smart Strategies: Diversifying Your Investments for Long-Term Success'

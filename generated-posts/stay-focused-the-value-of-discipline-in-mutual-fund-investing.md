@@ -6,7 +6,7 @@ categories:
   - 'Long-Term Investing'
   - 'SIP'
 createdAt: '2024-07-04T08:15:00.000Z'
-image: '/images/blogs/blog_cover_42.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552165/blog_cover_42_pkwovl.png'
 slug: 'stay-focused-the-value-of-discipline-in-mutual-fund-investing'
 summary: 'Investing isn’t about reacting to every market movement—it’s about staying committed to a long-term strategy. In the world of mutual funds, discipline often outweighs timing.'
 title: 'Stay Focused: The Value of Discipline in Mutual Fund Investing'

@@ -6,7 +6,7 @@ categories:
   - 'Mutual Funds'
   - 'Equity'
 createdAt: '2025-08-29T13:59:31.127Z'
-image: '/images/blogs/blog_cover_55.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552173/blog_cover_55_loik4k.jpg'
 slug: '7-common-investment-mistakes-and-how-to-avoid-them'
 summary: "## Don't Panic Sell"
 title: '7 Common Investment Mistakes And How To Avoid Them'

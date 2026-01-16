@@ -6,7 +6,7 @@ categories:
   - 'Risk Mitigation'
   - 'Capital Appreciation'
 createdAt: '2024-07-04T08:05:45.000Z'
-image: '/images/blogs/blog_cover_29.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552153/blog_cover_29_ikxtlv.jpg'
 slug: 'unpacking-the-benefits-of-balance-advantage-funds-for-investors'
 summary: '## Unpacking the Benefits of Balance Advantage Funds for Investors'
 title: 'Unpacking the Benefits of Balance Advantage Funds for Investors'

@@ -4,7 +4,7 @@ categories:
   - 'Investing'
   - 'Market Cap'
 createdAt: '2025-08-02T08:53:20.004Z'
-image: '/images/blogs/blog_cover_50.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552155/blog_cover_50_llb8b1.png'
 slug: 'market-volatility-tips-for-staying-calm-during-market-fluctuations'
 summary: "If you've spent any time looking at stock market charts, you've probably noticed they rarely move in a perfectly straight line upwards. Instead, they zig-zag, dip, and surge – a reflection of the constant ebb and flow of economic news, company performance, and investor sentiment."
 title: 'Market Volatility: Tips for Staying Calm During Market Fluctuations'

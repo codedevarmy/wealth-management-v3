@@ -6,7 +6,7 @@ categories:
   - 'Investing Strategy'
   - 'Wealth Creation'
 createdAt: '2024-07-04T07:56:01.000Z'
-image: '/images/blogs/blog_cover_19.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552147/blog_cover_19_dmnejf.jpg'
 slug: 'the-ultimate-guide-to-topup-sips-why-every-investor-should-consider-this-smart-strategy'
 summary: '## Introduction'
 title: 'The Ultimate Guide to Top-up SIPs: Why Every Investor Should Consider this Smart Strategy'

@@ -6,7 +6,7 @@ categories:
   - 'Financial Planning'
   - 'Wealth Building'
 createdAt: '2024-07-04T08:17:00.000Z'
-image: '/images/blogs/blog_cover_44.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552164/blog_cover_44_bfzdpn.png'
 slug: 'millennial-money-moves-mutual-funds-made-simple'
 summary: 'Thinking about growing your money but not sure where to begin? Mutual funds might be the perfect starting point—especially for millennials looking to build wealth without getting lost in financial jargon.'
 title: 'Millennial Money Moves: Mutual Funds Made Simple'

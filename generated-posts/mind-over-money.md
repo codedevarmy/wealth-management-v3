@@ -5,7 +5,7 @@ categories:
   - 'Financial Planning'
   - 'Investing'
 createdAt: '2024-07-04T07:57:03.000Z'
-image: '/images/blogs/blog_cover_21.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552148/blog_cover_21_be9n8e.jpg'
 slug: 'mind-over-money'
 summary: '## Introduction'
 title: 'Mind over Money'

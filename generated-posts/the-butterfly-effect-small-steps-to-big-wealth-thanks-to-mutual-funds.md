@@ -5,7 +5,7 @@ categories:
   - 'Compounding'
   - 'Financial Planning'
 createdAt: '2024-07-04T07:46:35.000Z'
-image: '/images/blogs/blog_cover_8.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552139/blog_cover_8_t8ppuo.jpg'
 slug: 'the-butterfly-effect-small-steps-to-big-wealth-thanks-to-mutual-funds'
 summary: "In the vast and intricate world of finance, where big moves often dominate headlines, there's a beautiful concept known as the butterfly effect. This phenomenon suggests that a small action, like the flutter of a butterfly's wings, can set off a chain of events leading to significant changes."
 title: 'The Butterfly Effect: Small Steps to Big Wealth, Thanks to Mutual Funds'

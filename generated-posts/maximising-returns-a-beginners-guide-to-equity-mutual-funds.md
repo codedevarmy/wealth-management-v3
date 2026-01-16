@@ -4,7 +4,7 @@ categories:
   - 'Investing'
   - 'Market Cap'
 createdAt: '2025-08-02T08:53:20.000Z'
-image: '/images/blogs/blog_cover_48.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552157/blog_cover_48_gxarqb.png'
 slug: 'maximising-returns-a-beginners-guide-to-equity-mutual-funds'
 summary: 'For many new investors, the stock market can seem like a daunting, complex maze. Individual stock picking requires significant research, time, and a deep understanding of company financials.'
 title: 'Maximising Returns: A Beginner’s Guide to Equity Mutual Funds'

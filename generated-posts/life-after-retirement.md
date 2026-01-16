@@ -5,7 +5,7 @@ categories:
   - 'Lifestyle'
   - 'Healthcare'
 createdAt: '2024-07-04T07:45:21.000Z'
-image: '/images/blogs/blog_cover_6.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552137/blog_cover_6_hhuvdi.jpg'
 slug: 'life-after-retirement'
 summary: 'Retirement is an exciting phase filled with opportunities, personal growth, and leisure. To maximize these golden years, a solid retirement savings plan is crucial.'
 title: 'Life After Retirement'

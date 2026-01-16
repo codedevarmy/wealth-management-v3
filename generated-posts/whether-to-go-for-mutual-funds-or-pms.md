@@ -5,7 +5,7 @@ categories:
   - 'Investing'
   - 'Financial Services'
 createdAt: '2024-07-04T07:58:27.000Z'
-image: '/images/blogs/blog_cover_22.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552149/blog_cover_22_dqa30t.jpg'
 slug: 'whether-to-go-for-mutual-funds-or-pms'
 summary: 'Portfolio Management Services (PMS) may sound like mutual funds. Are you confused between PMS and Mutual Funds?'
 title: 'Whether to go for mutual funds or PMS?'

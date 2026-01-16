@@ -6,7 +6,7 @@ categories:
   - 'Investment Strategy'
   - 'Risk Tolerance'
 createdAt: '2024-07-04T08:13:00.000Z'
-image: '/images/blogs/blog_cover_31.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552154/blog_cover_31_zm7rng.jpg'
 slug: 'how-to-build-a-diversified-portfolio-with-mutual-funds'
 summary: '## Unlocking Wealth: Mastering the Art of Building a Well-Balanced Portfolio through Mutual Funds'
 title: 'How to Build a Diversified Portfolio with Mutual Funds'

@@ -4,7 +4,7 @@ categories:
   - 'Investing Mistakes'
   - 'Financial Planning'
 createdAt: '2024-07-04T07:49:33.000Z'
-image: '/images/blogs/blog_cover_13.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552142/blog_cover_13_qvxksp.jpg'
 slug: 'common-mutual-fund-mistakes-investors-make-and-how-to-avoid-them'
 summary: 'Mutual funds offer a convenient and accessible way for investors to participate in the stock market. However, even seasoned investors can make mistakes that can impact their returns.'
 title: 'Common Mutual Fund Mistakes Investors Make and How to Avoid Them'

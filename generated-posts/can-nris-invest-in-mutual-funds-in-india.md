@@ -6,7 +6,7 @@ categories:
   - 'FEMA'
   - 'Taxation'
 createdAt: '2024-07-04T07:58:27.000Z'
-image: '/images/blogs/blog_cover_24.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552150/blog_cover_24_aqgdav.jpg'
 slug: 'can-nris-invest-in-mutual-funds-in-india'
 summary: 'Are you an NRI looking to invest your money in mutual funds in India? Look no further!'
 title: 'Can NRIs Invest in Mutual Funds in India?'

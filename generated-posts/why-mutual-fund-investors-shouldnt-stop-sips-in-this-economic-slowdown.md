@@ -6,7 +6,7 @@ categories:
   - 'Economic Slowdown'
   - 'Rupee Cost Averaging'
 createdAt: '2024-07-04T07:59:00.000Z'
-image: '/images/blogs/blog_cover_23.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552150/blog_cover_23_enaip5.jpg'
 slug: 'why-mutual-fund-investors-shouldnt-stop-sips-in-this-economic-slowdown'
 summary: 'With the looming recession fears, many investors are pausing their SIPs. It has also been historically observed that investors tend to stop their SIP investments during an economic slowdown.'
 title: "Why Mutual Fund Investors Shouldn't Stop SIPs In This Economic Slowdown"

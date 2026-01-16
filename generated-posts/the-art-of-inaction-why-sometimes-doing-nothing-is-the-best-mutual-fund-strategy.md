@@ -6,7 +6,7 @@ categories:
   - 'SIP'
   - 'Long-Term Investing'
 createdAt: '2024-07-04T08:09:00.000Z'
-image: '/images/blogs/blog_cover_30.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552172/blog_cover_30_dskciy.png'
 slug: 'the-art-of-inaction-why-sometimes-doing-nothing-is-the-best-mutual-fund-strategy'
 summary: 'In a world full of financial noise urging constant action, the idea of "doing nothing" with your mutual fund investments might sound counterintuitive — but it can be surprisingly effective.'
 title: 'The Art of Inaction: Why Sometimes Doing Nothing is the Best Mutual Fund Strategy'

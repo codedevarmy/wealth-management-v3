@@ -4,7 +4,7 @@ categories:
   - 'Investing'
   - 'SIP'
 createdAt: '2025-08-02T08:53:20.003Z'
-image: '/images/blogs/blog_cover_49.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552158/blog_cover_49_mkgraz.png'
 slug: 'the-power-of-sips-how-small-investments-can-lead-to-big-gains'
 summary: 'We all dream of building wealth, but the thought of needing a huge lump sum to kickstart investments can be a daunting hurdle. What if I told you that consistent, small investments could be your most powerful tool in the journey to financial freedom?'
 title: 'The Power of SIPs: How Small Investments Can Lead to Big Gains'

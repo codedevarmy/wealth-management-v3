@@ -5,7 +5,7 @@ categories:
   - 'Budgeting'
   - 'Savings'
 createdAt: '2024-07-04T07:47:12.000Z'
-image: '/images/blogs/blog_cover_9.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552140/blog_cover_9_esza0b.jpg'
 slug: 'financial-planning-for-couples'
 summary: '## Financial Planning for Couples in India'
 title: 'Financial Planning for Couples'

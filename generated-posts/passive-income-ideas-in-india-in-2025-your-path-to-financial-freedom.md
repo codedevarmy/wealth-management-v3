@@ -6,7 +6,7 @@ categories:
   - 'Side Hustle'
   - 'Financial Freedom'
 createdAt: '2025-08-29T13:59:31.126Z'
-image: '/images/blogs/blog_cover_54.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552174/blog_cover_54_xp6ma0.jpg'
 slug: 'passive-income-ideas-in-india-in-2025-your-path-to-financial-freedom'
 summary: 'Tired of the 9-to-5 grind? Many of us dream of a life where our money works for us, not the other way around.'
 title: 'Passive Income Ideas in India in 2025: Your Path to Financial Freedom'

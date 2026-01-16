@@ -6,7 +6,7 @@ categories:
   - 'Mutual Funds'
   - 'Investment Strategy'
 createdAt: '2024-07-04T08:14:00.000Z'
-image: '/images/blogs/blog_cover_41.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552161/blog_cover_41_ricnsq.png'
 slug: 'outsmarting-yourself-how-to-beat-behavioural-biases-in-investing'
 summary: 'We all like to think our investment choices are logical—but our minds often play tricks on us. Behavioural biases are psychological tendencies that can lead to poor financial decisions without us realizing it.'
 title: 'Outsmarting Yourself: How to Beat Behavioural Biases in Investing'

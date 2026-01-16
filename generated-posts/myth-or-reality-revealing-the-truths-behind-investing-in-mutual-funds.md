@@ -4,7 +4,7 @@ categories:
   - 'Investing'
   - 'Myths'
 createdAt: '2024-07-04T07:08:31.674Z'
-image: '/images/blogs/blog_cover_1.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552135/blog_cover_1_wntxc6.jpg'
 slug: 'myth-or-reality-revealing-the-truths-behind-investing-in-mutual-funds'
 summary: "Welcome to our blog post that aims to debunk common myths and reveal the truths behind investing in mutual funds. Whether you're new to the concept or a seasoned investor, we will address lingering doubts and provide valuable insights to help you understand the reality of mutual fund investing."
 title: 'Myth or Reality? Revealing the Truths behind Investing in Mutual Funds'

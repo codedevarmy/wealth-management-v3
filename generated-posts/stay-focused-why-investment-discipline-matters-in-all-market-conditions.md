@@ -6,7 +6,7 @@ categories:
   - 'Market Volatility'
   - 'Financial Goals'
 createdAt: '2024-07-04T07:59:40.000Z'
-image: '/images/blogs/blog_cover_25.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552151/blog_cover_25_xleerp.jpg'
 slug: 'stay-focused-why-investment-discipline-matters-in-all-market-conditions'
 summary: "Investing in mutual funds is a long-term journey, filled with ups and downs, twists and turns. While it's tempting to try and outsmart the market by constantly adjusting your strategy, the truth is that maintaining discipline and staying the course is often the key to achieving your financial goals."
 title: 'Stay Focused: Why Investment Discipline Matters in All Market Conditions'

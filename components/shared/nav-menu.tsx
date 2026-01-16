@@ -9,10 +9,13 @@ import {
 import { navlinks } from '@/constants';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState, type ComponentProps } from 'react';
 
 export default function NavMenu(props: ComponentProps<typeof NavigationMenu>) {
   const [trackHash, setTrackHash] = useState('');
+
+  const pathname = usePathname();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -24,6 +27,10 @@ export default function NavMenu(props: ComponentProps<typeof NavigationMenu>) {
       }
     }
   }, []);
+
+  // console.log({ pathname });
+  // pathname: '/blogs/passive-income-ideas-in-india-in-2025-your-path-to-financial-freedom'
+  const isBlogPage = pathname?.startsWith('/blogs/');
 
   return (
     <NavigationMenu {...props}>
@@ -58,7 +65,8 @@ export default function NavMenu(props: ComponentProps<typeof NavigationMenu>) {
               )}>
               <Link
                 scroll={true}
-                href={link.href}
+                href={isBlogPage ? '/' : link.href}
+                prefetch={isBlogPage ? true : false}
                 onClick={() => {
                   localStorage.setItem('trackHash', link.href);
                   return setTrackHash(link.href);

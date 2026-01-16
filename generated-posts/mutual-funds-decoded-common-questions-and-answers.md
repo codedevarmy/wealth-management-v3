@@ -4,7 +4,7 @@ categories:
   - 'FAQ'
   - 'Investing Basics'
 createdAt: '2024-07-04T07:52:36.000Z'
-image: '/images/blogs/blog_cover_15.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552144/blog_cover_15_kszrcf.jpg'
 slug: 'mutual-funds-decoded-common-questions-and-answers'
 summary: '## 1. What is a mutual fund?'
 title: 'Mutual Funds Decoded: Common Questions and Answers'

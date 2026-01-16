@@ -5,7 +5,7 @@ categories:
   - 'Individual Plan'
   - 'Family Floater'
 createdAt: '2024-07-04T07:48:19.000Z'
-image: '/images/blogs/blog_cover_11.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552141/blog_cover_11_exe5my.jpg'
 slug: 'navigating-the-maze-of-health-insurance-a-guide-to-informed-decisionmaking'
 summary: 'Ever heard the old saying, "Health is Wealth"? I''m guessing you''ve heard it plenty of times, right?'
 title: 'Navigating the Maze of Health Insurance: A Guide to Informed Decision-Making'

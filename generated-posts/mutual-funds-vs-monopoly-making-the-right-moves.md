@@ -6,7 +6,7 @@ categories:
   - 'Diversification'
   - 'Beginner Investing'
 createdAt: '2024-07-04T08:18:00.000Z'
-image: '/images/blogs/blog_cover_45.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552166/blog_cover_45_mt1alf.png'
 slug: 'mutual-funds-vs-monopoly-making-the-right-moves'
 summary: 'Ever thought investing could be as fun as a game of Monopoly? Turns out, it’s not such a far-fetched comparison.'
 title: 'Mutual Funds vs. Monopoly: Making the Right Moves'

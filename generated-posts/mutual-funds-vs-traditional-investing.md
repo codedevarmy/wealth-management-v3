@@ -4,7 +4,7 @@ categories:
   - 'Investing'
   - 'Comparison'
 createdAt: '2024-07-04T07:20:46.000Z'
-image: '/images/blogs/blog_cover_3.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552135/blog_cover_3_ddi3l4.jpg'
 slug: 'mutual-funds-vs-traditional-investing'
 summary: 'Are you tired of the traditional investment options that seem to have limited returns? Looking for an alternative that can potentially provide higher returns while minimizing risk?'
 title: 'Mutual Funds VS Traditional Investing'

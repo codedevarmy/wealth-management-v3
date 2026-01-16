@@ -5,7 +5,7 @@ categories:
   - 'Financial Security'
   - 'Business'
 createdAt: '2024-07-04T07:53:20.000Z'
-image: '/images/blogs/blog_cover_16.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552145/blog_cover_16_kkvx9p.jpg'
 slug: 'the-imperative-why-of-retirement-planning-for-entrepreneurs'
 summary: '## Introduction'
 title: 'The Imperative "Why" of Retirement Planning for Entrepreneurs'

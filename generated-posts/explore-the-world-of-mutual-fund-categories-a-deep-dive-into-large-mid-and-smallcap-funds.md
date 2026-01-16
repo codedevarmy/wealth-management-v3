@@ -4,7 +4,7 @@ categories:
   - 'Investing'
   - 'Market Cap'
 createdAt: '2024-07-04T07:09:40.000Z'
-image: '/images/blogs/blog_cover_2.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552135/blog_cover_2_gggzfh.jpg'
 slug: 'explore-the-world-of-mutual-fund-categories-a-deep-dive-into-large-mid-and-smallcap-funds'
 summary: 'This comprehensive guide will demystify the essential categories of mutual funds—large, mid, and small-cap funds—so that you can make informed investment choices tailored to the Indian market.'
 title: 'Explore the World of Mutual Fund Categories: A Deep Dive into Large, Mid, and Small-Cap Funds'

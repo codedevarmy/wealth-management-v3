@@ -5,7 +5,7 @@ categories:
   - 'Financial Planning'
   - 'Early Investment'
 createdAt: '2024-07-04T07:55:00.000Z'
-image: '/images/blogs/blog_cover_18.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552147/blog_cover_18_pavi9b.jpg'
 slug: 'power-of-compounding'
 summary: '## Introduction'
 title: 'Power of Compounding'

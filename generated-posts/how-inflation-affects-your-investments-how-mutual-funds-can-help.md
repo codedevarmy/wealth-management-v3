@@ -6,7 +6,7 @@ categories:
   - 'Financial Planning'
   - 'Wealth Creation'
 createdAt: '2024-07-04T08:02:50.000Z'
-image: '/images/blogs/blog_cover_32.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552163/blog_cover_32_ypjoq8.png'
 slug: 'how-inflation-affects-your-investments-how-mutual-funds-can-help'
 summary: '## Understanding Inflation & Its Impact on Your Wealth'
 title: 'How Inflation Affects Your Investments & How Mutual Funds Can Help'

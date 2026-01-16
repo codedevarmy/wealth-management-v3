@@ -5,7 +5,7 @@ categories:
   - 'Middle Class'
   - 'Accessibility'
 createdAt: '2024-07-04T07:44:50.000Z'
-image: '/images/blogs/blog_cover_5.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552136/blog_cover_5_ac5qfb.jpg'
 slug: 'mutual-funds-the-accessible-investment-for-the-working-middle-class'
 summary: "So you're part of the hardworking middle class, hustling to make ends meet and secure your family's future, right? I hear you."
 title: 'Mutual Funds: The Accessible Investment for the Working Middle Class'

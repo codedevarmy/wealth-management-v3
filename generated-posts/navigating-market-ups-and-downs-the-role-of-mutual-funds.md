@@ -6,7 +6,7 @@ categories:
   - 'SIP'
   - 'STP'
 createdAt: '2024-07-04T08:00:00.000Z'
-image: '/images/blogs/blog_cover_26.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552152/blog_cover_26_e9iyxy.jpg'
 slug: 'navigating-market-ups-and-downs-the-role-of-mutual-funds'
 summary: '## Understanding Market Swings'
 title: 'Navigating Market Ups and Downs: The Role of Mutual Funds'

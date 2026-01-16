@@ -5,7 +5,7 @@ categories:
   - 'Analogy'
   - 'Cricket'
 createdAt: '2024-07-04T07:45:51.000Z'
-image: '/images/blogs/blog_cover_7.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552138/blog_cover_7_p7xnvc.jpg'
 slug: 'from-cricket-pitch-to-financial-field-mutual-funds-taking-the-lead'
 summary: "Cricket and finance might seem like an odd pairing, but when you take a closer look, you'll find that the strategies that lead to victory on the cricket field can also be applied to the world of mutual funds. Just like a well-played innings, smart investing requires strategy, teamwork, and an eye for opportunities."
 title: 'From Cricket Pitch to Financial Field: Mutual Funds Taking the Lead'

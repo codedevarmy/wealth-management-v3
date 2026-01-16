@@ -6,7 +6,7 @@ categories:
   - 'SIP'
   - 'Wealth Creation'
 createdAt: '2024-07-04T08:10:00.000Z'
-image: '/images/blogs/blog_cover_38.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552160/blog_cover_38_tt37bf.png'
 slug: 'investing-with-purpose-how-mutual-funds-can-help-you-achieve-your-goals'
 summary: "Imagine setting out on a road trip without knowing your destination. You'd likely waste time, fuel, and energy — and end up nowhere meaningful."
 title: 'Investing With Purpose: How Mutual Funds Can Help You Achieve Your Goals'

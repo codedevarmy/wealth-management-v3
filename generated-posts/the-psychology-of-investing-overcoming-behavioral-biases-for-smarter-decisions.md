@@ -6,7 +6,7 @@ categories:
   - 'Financial Psychology'
   - 'Investment Strategy'
 createdAt: '2024-07-04T08:07:00.000Z'
-image: '/images/blogs/blog_cover_35.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552169/blog_cover_35_novnhu.png'
 slug: 'the-psychology-of-investing-overcoming-behavioral-biases-for-smarter-decisions'
 summary: '## Common Behavioral Biases in Investing'
 title: 'The Psychology of Investing: Overcoming Behavioral Biases for Smarter Decisions'

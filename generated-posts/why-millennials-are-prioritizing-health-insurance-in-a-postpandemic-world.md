@@ -6,7 +6,7 @@ categories:
   - 'Financial Planning'
   - 'Healthcare Costs'
 createdAt: '2024-07-04T08:06:30.000Z'
-image: '/images/blogs/blog_cover_34.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552167/blog_cover_34_rwpgo8.png'
 slug: 'why-millennials-are-prioritizing-health-insurance-in-a-postpandemic-world'
 summary: '## The Reality Check: Health Risks Are Unpredictable'
 title: 'Why Millennials Are Prioritizing Health Insurance in a Post-Pandemic World'

@@ -6,7 +6,7 @@ categories:
   - 'Investing'
   - 'Taxation'
 createdAt: '2025-08-29T13:59:31.125Z'
-image: '/images/blogs/blog_cover_53.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552167/blog_cover_53_j7nd7t.jpg'
 slug: 'what-is-a-consolidated-account-statement-cas-why-it-matters-in-2025'
 summary: "In today's fast-paced world, keeping track of your investments can feel like a full-time job. With demat accounts, mutual funds, and other financial instruments spread across different platforms, it’s easy to lose sight of the bigger picture."
 title: 'What is a Consolidated Account Statement (CAS) & Why It Matters in 2025'

@@ -5,7 +5,7 @@ categories:
   - 'Income'
   - 'Diversification'
 createdAt: '2024-07-04T07:47:55.000Z'
-image: '/images/blogs/blog_cover_10.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552140/blog_cover_10_ck5rno.jpg'
 slug: 'transform-your-extra-income-best-areas-for-mutual-fund-investments'
 summary: 'Are you looking to maximize your extra income? Do you want to make your money work for you and generate more returns?'
 title: 'Transform Your Extra Income: Best Areas for Mutual Fund Investments'

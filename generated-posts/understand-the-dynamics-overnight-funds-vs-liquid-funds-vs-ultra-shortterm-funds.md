@@ -5,7 +5,7 @@ categories:
   - 'Liquidity'
   - 'Short-Term Investment'
 createdAt: '2024-07-04T08:01:20.000Z'
-image: '/images/blogs/blog_cover_28.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552155/blog_cover_28_fztygx.jpg'
 slug: 'understand-the-dynamics-overnight-funds-vs-liquid-funds-vs-ultra-shortterm-funds'
 summary: 'When it comes to parking your surplus cash or optimizing your investments for short-term gains, navigating the realm of mutual funds can be both enticing and perplexing. Among the plethora of options available, overnight funds, liquid funds, and ultra short-term funds stand out as popular choices for investors seeking liquidity and stability.'
 title: 'Understand the Dynamics: Overnight Funds vs. Liquid Funds vs. Ultra Short-Term Funds'

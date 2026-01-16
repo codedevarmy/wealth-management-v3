@@ -6,7 +6,7 @@ categories:
   - 'Liquidity'
   - 'Financial Planning'
 createdAt: '2024-07-04T08:16:00.000Z'
-image: '/images/blogs/blog_cover_43.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552156/blog_cover_43_dkrxcw.png'
 slug: 'understanding-overnight-liquid-ultra-shortterm-funds'
 summary: 'Looking to park surplus cash or optimize short-term returns? Three key mutual fund categories— **overnight funds, liquid funds, and ultra short-term funds**—offer varied levels of liquidity, safety, and return potential.'
 title: 'Understanding Overnight, Liquid & Ultra Short-Term Funds'

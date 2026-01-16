@@ -6,7 +6,7 @@ categories:
   - 'Financial Planning'
   - 'Mutual Funds'
 createdAt: '2024-07-04T08:05:15.000Z'
-image: '/images/blogs/blog_cover_33.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552158/blog_cover_33_ob2boa.png'
 slug: 'how-to-stay-invested-during-market-volatility-without-panic-selling'
 summary: '## Understanding Market Volatility'
 title: 'How to Stay Invested During Market Volatility Without Panic Selling'

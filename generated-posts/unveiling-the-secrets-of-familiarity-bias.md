@@ -5,7 +5,7 @@ categories:
   - 'Bias'
   - 'Financial Psychology'
 createdAt: '2024-07-04T07:56:34.000Z'
-image: '/images/blogs/blog_cover_20.jpg'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552148/blog_cover_20_aximbb.jpg'
 slug: 'unveiling-the-secrets-of-familiarity-bias'
 summary: '## Mind over Money: Mastering the Mental Game for Financial Triumph'
 title: 'Unveiling the Secrets of Familiarity Bias'

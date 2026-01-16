@@ -5,7 +5,7 @@ categories:
   - 'Investing'
   - 'Financial Goals'
 createdAt: '2025-12-20T15:55:44.357Z'
-image: '/images/blogs/blog_cover_14.png'
+image: 'https://res.cloudinary.com/dxgckfhti/image/upload/v1768552143/blog_cover_14_bhgdc3.jpg'
 slug: 'millennial-money-moves-navigating-mutual-funds-for-the-next-generation'
 summary: "Hey there! If you've ever thought about saving or investing your hard-earned money, you might have stumbled upon the term mutual funds."
 title: 'Millennial Money Moves: Navigating Mutual Funds for the Next Generation'
