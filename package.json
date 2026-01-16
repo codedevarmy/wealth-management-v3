@@ -13,6 +13,7 @@
   "dependencies": {
     "@ai-sdk/google": "^2.0.51",
     "@hookform/resolvers": "^5.2.2",
+    "@liorpo/react-hook-form-persist": "^1.0.10",
     "@next/bundle-analyzer": "^16.1.0",
     "@number-flow/react": "^0.5.10",
     "@plaiceholder/next": "^3.0.0",

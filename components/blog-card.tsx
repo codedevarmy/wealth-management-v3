@@ -24,8 +24,6 @@ export default function BlogCard(props: BlogCardProps) {
     return parts.slice(1).join('/');
   }
 
-  console.log('post.image:', splitUrl(post.image));
-
   return (
     <Card className='shadow-none py-0 gap-3'>
       <CardHeader className='p-2 pb-0'>

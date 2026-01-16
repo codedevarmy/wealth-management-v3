@@ -23,10 +23,10 @@ export default function NavMenu(props: ComponentProps<typeof NavigationMenu>) {
       if (storedHash) {
         // eslint-disable-next-line
         setTrackHash(storedHash);
-        window.location.hash = '#home';
+        window.location.hash = trackHash;
       }
     }
-  }, []);
+  }, [trackHash]);
 
   // console.log({ pathname });
   // pathname: '/blogs/passive-income-ideas-in-india-in-2025-your-path-to-financial-freedom'

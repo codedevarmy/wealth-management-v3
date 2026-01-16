@@ -28,7 +28,7 @@ export default function LocationDialog() {
           Know More
         </ShadCNShinyButton>
       </DialogTrigger>
-      <DialogContent className='sm:max-w-lg w-full gap-2'>
+      <DialogContent className='data-[state=open]:zoom-in-0! data-[state=open]:duration-600 sm:max-w-lg w-full gap-2'>
         <DialogHeader>
           <DialogTitle>Our Location</DialogTitle>
           <DialogDescription>

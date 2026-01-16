@@ -103,12 +103,7 @@ export const sipSchema = commonCalculatorSchema
   .omit({ investmentAmount: true });
 
 export const retirementSchema = commonCalculatorSchema
-  .omit({
-    childName: true,
-    currentCost: true,
-    currentInvestment: true,
-    childAge: true,
-  })
+  .pick({ name: true, inflationRate: true })
   .extend({
     currentMonthlyExpenses: z
       .string()
@@ -124,8 +119,8 @@ export const retirementSchema = commonCalculatorSchema
       .max(100, 'Retirement age must be at most 100'),
     lifeExpectancy: z
       .float32()
-      .min(50, 'Life expectancy must be at least 50')
-      .max(120, 'Life expectancy must be at most 120'),
+      .min(18, 'Life expectancy must be at least 18')
+      .max(80, 'Life expectancy must be at most 80'),
     postRetirementInflationRate: z
       .float32()
       .min(4, 'Post-retirement inflation rate must be between 4% and 20%')
@@ -134,14 +129,28 @@ export const retirementSchema = commonCalculatorSchema
       .float32()
       .min(2, 'Post-retirement risk-free rate must be at least 2%')
       .max(13, 'Post-retirement risk-free rate must be at most 13%'),
+    returnOnExistingInvestment: z
+      .float32()
+      .min(2, 'Return on existing investment must be at least 2%')
+      .max(13, 'Return on existing investment must be at most 13%'),
+    returnOnNewInvestment: z
+      .float32()
+      .min(2, 'Return on new investment must be at least 2%')
+      .max(13, 'Return on new investment must be at most 13%'),
   });
 
-export const weddingSchema = commonCalculatorSchema.extend({
-  marriageAge: z
-    .float32()
-    .min(21, 'Marriage age must be at least 21')
-    .max(50, 'Marriage age must be at most 50'),
-});
+export const weddingSchema = commonCalculatorSchema
+  .omit({ newInvestmentRate: true })
+  .extend({
+    marriageAge: z
+      .float32()
+      .min(21, 'Marriage age must be at least 21')
+      .max(50, 'Marriage age must be at most 50'),
+    returnOnNewInvestment: z
+      .float32()
+      .min(2, 'Return on new investment must be at least 2%')
+      .max(13, 'Return on new investment must be at most 13%'),
+  });
 
 export const vacationSchema = commonCalculatorSchema
   .omit({ childAge: true })
@@ -151,6 +160,10 @@ export const vacationSchema = commonCalculatorSchema
       .min(1, 'After how many years is required')
       .max(30, 'After how many years must be at most 30'),
   });
+
+export const emailFormSchema = z.object({
+  email: z.email('Invalid email address'),
+});
 
 export type CommonCalculatorValues = z.infer<typeof commonCalculatorSchema>;
 
@@ -163,3 +176,5 @@ export type VacationCalculatorValues = z.infer<typeof vacationSchema>;
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;
 export type ConsultationFormValues = z.infer<typeof consultationSchema>;
+
+export type EmailFormValues = z.infer<typeof emailFormSchema>;
