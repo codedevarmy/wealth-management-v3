@@ -3,8 +3,10 @@ import ServiceCard from './service-card';
 
 export default function Services() {
   return (
-    <section id='services' className='max-w-(--breakpoint-xl) mx-auto w-full'>
-      <div className='py-10 px-6 text-center'>
+    <section
+      id='services'
+      className='max-w-(--breakpoint-xl) mx-auto w-full py-24 px-6'>
+      <div className='text-center'>
         <h2 className='text-4xl md:text-[2.5rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty sm:mx-auto'>
           Discover Our Exceptional Services
         </h2>

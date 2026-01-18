@@ -211,7 +211,7 @@ export const footerLinks = {
 export const stats = [
   {
     id: crypto.randomUUID(),
-    label: 'Years of Experience',
+    label: 'Years Experience',
     value: 10,
     suffix: '+',
   },

@@ -37,13 +37,13 @@ export default function LogoSVG() {
           </g>
         </svg>
         <svg
-          suppressHydrationWarning
           className={'block h-fit'}
           width='53'
           // height='75.901'
           viewBox='-2 -6 300 100'
           xmlns='http://www.w3.org/2000/svg'>
           <g
+            suppressHydrationWarning
             id='svgGroup'
             strokeLinecap='round'
             fillRule='evenodd'

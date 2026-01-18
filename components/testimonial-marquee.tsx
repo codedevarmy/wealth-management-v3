@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { googleReviews, testimonials } from '@/constants';
 import { IconStar, IconStarHalf } from '@tabler/icons-react';
 import Image from 'next/image';
+import { Blockquote, BlockquoteAuthor } from './extends/blockquote';
 import { Marquee } from './marque';
 
 export function TestimonialCard({
@@ -53,13 +54,13 @@ export function TestimonialCard({
 
 export default function TestimonialMarquee() {
   const filteredGoogleReviews = googleReviews.filter(
-    (review) => review.message && review.name
+    (review) => review.message && review.name,
   );
 
   const reviewCount = googleReviews.length + testimonials.length;
 
   return (
-    <div className='w-full max-w-(--breakpoint-xl) mx-auto text-center'>
+    <div className='w-full max-w-(--breakpoint-xl) mx-auto text-center pt-24'>
       <div className={'relative space-y-4'}>
         <h2 className='text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-[-0.035em]'>
           What Our Clients Say About Us
@@ -71,7 +72,7 @@ export default function TestimonialMarquee() {
 
         <div
           className={
-            'size-36 mx-auto relative lg:absolute lg:top-0 lg:right-0'
+            'size-36 mx-auto relative lg:absolute lg:top-0 lg:right-2'
           }>
           <Image
             src='/google-reviews.png'
@@ -87,9 +88,15 @@ export default function TestimonialMarquee() {
             {reviewCount}
           </span>
         </div>
+
+        <Blockquote>
+          Learn from the past, set vivid, detailed goals for the future, and
+          live in the only moment of time over which you have any control: now
+          <BlockquoteAuthor>Denis Waitley</BlockquoteAuthor>
+        </Blockquote>
       </div>
 
-      <div className='relative flex w-full flex-col items-center justify-center gap-1 overflow-hidden py-8'>
+      <div className='relative flex w-full flex-col items-center justify-center gap-10 overflow-hidden py-8'>
         {/* Marquee moving left to right (default) */}
         <Marquee pauseOnHover repeat={3} className='[--duration:120s]'>
           {testimonials.map((review) => (

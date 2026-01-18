@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div
       id='contact-us'
-      className='min-h-screen flex items-center justify-center py-16'>
+      className='min-h-screen flex items-center justify-center py-24'>
       <div className='w-full max-w-(--breakpoint-xl) mx-auto px-6 xl:px-0'>
         <b className='text-muted-foreground uppercase font-semibold text-sm'>
           Contact Us

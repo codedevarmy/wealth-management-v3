@@ -3,7 +3,8 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { AuroraText } from './extends/aurora-text';
-import { LazyBrochureDownload, LazyLocationDialog } from './lazy';
+import RocketIcon from './extends/icons/rocket';
+import { LazyBrochureDownload, LazyLocationDialog } from './lazy-components';
 
 export default function Hero() {
   return (
@@ -17,11 +18,13 @@ export default function Hero() {
           variant='secondary'
           className='rounded-full py-1 border-border'
           asChild>
-          {/* <a href='#'>
-            Just released v1.0.0 <ArrowUpRight className='ml-1 size-4' />
-          </a> */}
           <Link href='#home'>
-            ✨ New Features Released
+            <RocketIcon
+              className='stroke-primary size-4 stroke-2 inline-block'
+              stroke='currentColor'
+              strokeWidth={2}
+            />{' '}
+            Start Your Wealth Journey
             <ArrowUpRight className='ml-1 size-4' />
           </Link>
         </Badge>

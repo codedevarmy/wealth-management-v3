@@ -16,7 +16,7 @@ const IMAGES_ROW_B = [
 
 export function ScrollBasedVelocityImagesDemo() {
   return (
-    <section className='w-full max-w-(--breakpoint-xl) mx-auto'>
+    <section className='w-full max-w-(--breakpoint-xl) mx-auto py-24'>
       <div className='relative flex w-full flex-col items-center justify-center overflow-hidden py-8'>
         <ScrollVelocityContainer className='w-full'>
           <ScrollVelocityRow baseVelocity={6} direction={1} className='py-4'>

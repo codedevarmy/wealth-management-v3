@@ -14,7 +14,7 @@ export default function Calculators() {
   return (
     <section
       id='calaculators'
-      className='py-12 container max-w-(--breakpoint-xl) mx-auto px-4'>
+      className='container max-w-(--breakpoint-xl) mx-auto w-full px-4 py-24'>
       <div>
         <h2 className='text-4xl sm:text-5xl font-semibold tracking-tight text-center'>
           Unleash Your Creativity

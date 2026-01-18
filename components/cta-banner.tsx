@@ -6,15 +6,15 @@ export default function CTABanner() {
   return (
     <section
       id='free-consultation'
-      className='max-w-(--breakpoint-xl) mx-auto w-full'>
-      <div className='dark:border relative overflow-hidden my-20 dark bg-background text-foreground rounded-2xl py-10 md:py-16 px-6 md:px-14'>
+      className='max-w-(--breakpoint-xl) mx-auto py-8 xl:py-24'>
+      <div className='dark:border relative overflow-hidden my-20 dark bg-background text-foreground rounded-2xl py-10 md:py-16 px-6 md:px-14 w-full'>
         <LazyAnimatedGridPattern
           numSquares={90}
           maxOpacity={0.1}
           duration={3}
           className={cn(
             'mask-[radial-gradient(400px_circle_at_right,white,rgba(255,255,255,0.6),transparent)]',
-            'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12'
+            'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12',
           )}
         />
         <LazyAnimatedGridPattern
@@ -23,7 +23,7 @@ export default function CTABanner() {
           duration={3}
           className={cn(
             'mask-[radial-gradient(400px_circle_at_top_left,white,rgba(255,255,255,0.6),transparent)]',
-            'inset-x-0 inset-y-0 h-[200%] skew-y-12'
+            'inset-x-0 inset-y-0 h-[200%] skew-y-12',
           )}
         />
         <div className='relative z-0 flex flex-col gap-3 text-center'>

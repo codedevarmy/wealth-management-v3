@@ -27,34 +27,39 @@ export default function FAQ() {
   const faqToShow = isMobile ? faqs.slice(0, 4) : faqs;
 
   return (
-    <section id='faqs' className='w-full max-w-(--breakpoint-xl) mx-auto'>
-      <div className='flex items-center justify-center px-6 py-12'>
-        <div className='text-center'>
+    <section
+      id='faqs'
+      className='max-w-(--breakpoint-xl) mx-auto w-full px-6 xl:px-0 space-y-8 py-24'>
+      <div className='flex items-center justify-center w-full'>
+        <div className='text-center w-full'>
           <h2 className='text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-[-0.035em]'>
             Frequently Asked Questions
           </h2>
 
           {isMobile && !isShowMore ? (
-            <div className='mt-6 w-full grid md:grid-cols-2 gap-x-10'>
+            <div className='mt-6 w-full'>
               <Accordion
                 type='single'
                 collapsible
-                className='w-full'
+                className='w-full border rounded-md'
                 value={value}
                 onValueChange={setValue}>
                 {faqToShow.map(({ question, answer }, index) => (
-                  <AccordionItem key={question} value={`question-${index}`}>
+                  <AccordionItem
+                    key={question}
+                    value={`question-${index}`}
+                    className={'w-full'}>
                     <AccordionPrimitive.Header className='flex'>
                       <AccordionPrimitive.Trigger
                         className={cn(
                           'flex flex-1 items-center justify-between py-4 font-semibold transition-all hover:underline [&[data-state=open]>svg]:rotate-45',
-                          'text-start text-lg'
+                          'text-start text-base lg:text-lg px-4',
                         )}>
                         {index + 1}-{question}
                         <PlusIcon className='h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200' />
                       </AccordionPrimitive.Trigger>
                     </AccordionPrimitive.Header>
-                    <AccordionContent className='text-base text-muted-foreground text-start text-pretty'>
+                    <AccordionContent className='text-sm lg:text-base text-muted-foreground text-start text-pretty px-4'>
                       {answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -64,51 +69,29 @@ export default function FAQ() {
           ) : null}
 
           {!isShowMore && !isMobile ? (
-            <div className='mt-6 w-full grid md:grid-cols-2 gap-x-10'>
+            <div className='mt-6 w-full'>
               <Accordion
                 type='single'
                 collapsible
-                className='w-full'
+                className='w-full grid md:grid-cols-2 gap-x-6'
                 value={value}
                 onValueChange={setValue}>
-                {faqs.slice(0, 4).map(({ question, answer }, index) => (
-                  <AccordionItem key={question} value={`question-${index}`}>
+                {faqs.slice(0, 8).map(({ question, answer }, index) => (
+                  <AccordionItem
+                    key={question}
+                    value={`question-${index}`}
+                    className={'border rounded-md'}>
                     <AccordionPrimitive.Header className='flex'>
                       <AccordionPrimitive.Trigger
                         className={cn(
                           'flex flex-1 items-center justify-between py-4 font-semibold transition-all hover:underline [&[data-state=open]>svg]:rotate-45',
-                          'text-start text-lg'
+                          'text-start text-base lg:text-lg px-4',
                         )}>
                         {index + 1}-{question}
                         <PlusIcon className='h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200' />
                       </AccordionPrimitive.Trigger>
                     </AccordionPrimitive.Header>
-                    <AccordionContent className='text-base text-muted-foreground text-start text-pretty'>
-                      {answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-
-              <Accordion
-                type='single'
-                collapsible
-                className='w-full'
-                value={value}
-                onValueChange={setValue}>
-                {faqs.slice(5, 9).map(({ id, question, answer }, index) => (
-                  <AccordionItem key={id} value={`question-${index + 11}`}>
-                    <AccordionPrimitive.Header className='flex'>
-                      <AccordionPrimitive.Trigger
-                        className={cn(
-                          'flex flex-1 items-center justify-between py-4 font-semibold tracking-tight transition-all hover:underline [&[data-state=open]>svg]:rotate-45',
-                          'text-start text-lg'
-                        )}>
-                        {index + 1}- {question}
-                        <PlusIcon className='h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200' />
-                      </AccordionPrimitive.Trigger>
-                    </AccordionPrimitive.Header>
-                    <AccordionContent className='text-base text-muted-foreground text-start text-pretty'>
+                    <AccordionContent className='text-sm lg:text-base text-muted-foreground text-start text-pretty px-4'>
                       {answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -119,54 +102,35 @@ export default function FAQ() {
         </div>
       </div>
 
-      <div className={'flex items-center justify-center'}>
+      <div className={'flex items-center justify-center px-4'}>
         <Collapsible open={isShowMore} onOpenChange={setIsShowMore}>
-          <CollapsibleContent>
-            <div className='mt-6 w-full grid md:grid-cols-2 gap-x-10'>
+          <CollapsibleContent className='data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down flex flex-col gap-2 overflow-hidden transition-all duration-300 px-2'>
+            <div className='w-full'>
               <Accordion
                 type='single'
                 collapsible
-                className='w-full'
+                className='w-full grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-6'
                 value={value}
                 onValueChange={setValue}>
-                {faqs.slice(0, 11).map(({ question, answer }, index) => (
-                  <AccordionItem key={question} value={`question-${index}`}>
+                {faqs.map(({ question, answer }, index) => (
+                  <AccordionItem
+                    key={question}
+                    value={`question-${index}`}
+                    className={cn(
+                      'border rounded-md',
+                      index === faqs.length - 1 ? 'col-span-full' : '',
+                    )}>
                     <AccordionPrimitive.Header className='flex'>
                       <AccordionPrimitive.Trigger
                         className={cn(
                           'flex flex-1 items-center justify-between py-4 font-semibold transition-all hover:underline [&[data-state=open]>svg]:rotate-45',
-                          'text-start text-lg'
+                          'text-start text-base lg:text-lg px-4',
                         )}>
-                        {index + 1}-{question}
+                        {index + 1}. {question}
                         <PlusIcon className='h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200' />
                       </AccordionPrimitive.Trigger>
                     </AccordionPrimitive.Header>
-                    <AccordionContent className='text-base text-muted-foreground text-start text-pretty'>
-                      {answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-
-              <Accordion
-                type='single'
-                collapsible
-                className='w-full'
-                value={value}
-                onValueChange={setValue}>
-                {faqs.slice(11).map(({ id, question, answer }, index) => (
-                  <AccordionItem key={id} value={`question-${index + 11}`}>
-                    <AccordionPrimitive.Header className='flex'>
-                      <AccordionPrimitive.Trigger
-                        className={cn(
-                          'flex flex-1 items-center justify-between py-4 font-semibold tracking-tight transition-all hover:underline [&[data-state=open]>svg]:rotate-45',
-                          'text-start text-lg'
-                        )}>
-                        {index + 1}- {question}
-                        <PlusIcon className='h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200' />
-                      </AccordionPrimitive.Trigger>
-                    </AccordionPrimitive.Header>
-                    <AccordionContent className='text-base text-muted-foreground text-start text-pretty'>
+                    <AccordionContent className='text-sm lg:text-base text-muted-foreground text-start text-pretty px-4'>
                       {answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -174,11 +138,13 @@ export default function FAQ() {
               </Accordion>
             </div>
           </CollapsibleContent>
-          <CollapsibleTrigger
-            asChild
-            className='flex items-center justify-center mt-4 mb-8'>
-            <Button>{isShowMore ? 'Show Less' : 'Show More'}</Button>
-          </CollapsibleTrigger>
+          <div className='flex items-center justify-center'>
+            <CollapsibleTrigger
+              asChild
+              className='flex items-center justify-center data-[state=open]:my-6 data-[state=close]:mb-6'>
+              <Button>{isShowMore ? 'Show Less' : 'Show More'}</Button>
+            </CollapsibleTrigger>
+          </div>
         </Collapsible>
       </div>
     </section>

@@ -2,29 +2,47 @@
 
 import dynamic from 'next/dynamic';
 
+import { cn } from '@/lib/utils';
 import {
   Card,
   CardAction,
   CardContent,
   CardDescription,
   CardHeader,
+  CardTitle,
 } from './ui/card';
 import { Skeleton } from './ui/skeleton';
 
 export const LazyStatCard = dynamic(() => import('./stat-card'), {
   ssr: false,
   loading: () => (
-    <div className='mt-16 sm:mt-24 grid sm:grid-cols-2 lg:grid-cols-5 gap-6 justify-center'>
-      {Array.from({ length: 5 }).map((_, index) => (
-        <Card key={index}>
-          <CardContent>
-            <Skeleton className='h-12 w-full mb-4' />
-          </CardContent>
-          <CardDescription>
-            <Skeleton className='h-4 w-3/4 mx-auto mb-2' />
-          </CardDescription>
-        </Card>
-      ))}
+    <div className={'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4'}>
+      {Array.from({ length: 5 }).map((_, index) => {
+        const isLast = index === 4;
+
+        return (
+          <div
+            className={cn(
+              'border rounded-xl border-border/70 p-1',
+              isLast ? 'sm:col-span-full lg:col-span-1' : '',
+            )}
+            key={index}>
+            <Card className='rounded-lg bg-muted/20 h-full'>
+              <CardHeader>
+                <CardTitle className={'font-normal'}>
+                  <Skeleton className='h-6 w-20' />
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Skeleton className='h-12 w-full' />
+              </CardContent>
+              <CardDescription>
+                <Skeleton className='h-4 w-3/4 mx-auto' />
+              </CardDescription>
+            </Card>
+          </div>
+        );
+      })}
     </div>
   ),
 });
@@ -73,5 +91,15 @@ export const LazyBlogCarousel = dynamic(
         </div>
       );
     },
-  }
+  },
 );
+
+export const LazyLocationDialog = dynamic(() => import('./location-dialog'), {
+  loading: () => <Skeleton className='w-44 rounded-full h-11 animate-pulse' />,
+  ssr: false,
+});
+
+export const LazyBrochureDownload = dynamic(() => import('./brochure-dialog'), {
+  loading: () => <Skeleton className='w-48 rounded-full h-11 animate-pulse' />,
+  ssr: false,
+});
