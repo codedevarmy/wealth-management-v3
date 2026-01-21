@@ -7,5 +7,13 @@ export const LazyCaclculatorDrawerDialog = dynamic(
   {
     ssr: false,
     loading: () => <Skeleton className='h-10 w-full rounded-md' />,
-  }
+  },
+);
+
+export const LazyRiskProfileDialog = dynamic(
+  () => import('./risk-profile-dialog').then((mod) => mod.default),
+  {
+    ssr: false,
+    loading: () => <Skeleton className='mt-6 h-11 w-52 rounded-full' />,
+  },
 );

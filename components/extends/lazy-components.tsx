@@ -8,7 +8,7 @@ export const LazyTextHoverEffect = dynamic(
   {
     ssr: false,
     loading: () => <Skeleton className='w-full h-24 lg:h-32' />,
-  }
+  },
 );
 
 export const LazyPixelImage = dynamic(
@@ -18,5 +18,15 @@ export const LazyPixelImage = dynamic(
     loading: () => (
       <Skeleton className='w-full h-full aspect-4/3 basis-1/2 animate-pulse' />
     ),
-  }
+  },
+);
+
+export const LazyPixelTransition = dynamic(
+  () => import('./pixel-transition').then((mod) => mod.default),
+  {
+    ssr: false,
+    loading: () => (
+      <Skeleton className='w-full h-full aspect-square animate-pulse' />
+    ),
+  },
 );

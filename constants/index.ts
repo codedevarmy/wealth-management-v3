@@ -933,7 +933,7 @@ export const testimonials = [
     designation: 'Commercial head in an MNC.',
     // image: '/images/testimonials/testimonial_1.jpg',
     image:
-      'https://res.cloudinary.com/dxgckfhti/image/upload/v1768654109/testimonial_1_dp72w3.jpg',
+      'https://res.cloudinary.com/dxgckfhti/image/upload/w_80/v1768654109/testimonial_1_dp72w3.jpg',
     rating: 4.5,
     createdAt: new Date().toISOString(),
   },
@@ -944,7 +944,7 @@ export const testimonials = [
     designation: 'Managing Director - Synergy Maritime Pvt Ltd. Chennai.',
     // image: '/images/testimonials/testimonial_2.png',
     image:
-      'https://res.cloudinary.com/dxgckfhti/image/upload/v1768654110/testimonial_2_f9apn2.png',
+      'https://res.cloudinary.com/dxgckfhti/image/upload/w_80/v1768654110/testimonial_2_f9apn2.png',
     rating: 4.5,
     createdAt: new Date().toISOString(),
   },
@@ -956,7 +956,7 @@ export const testimonials = [
       'General Manager - Sales &amp; Service, TVS Motor Company Ltd, Hosur',
     // image: '/images/testimonials/testimonial_3.png',
     image:
-      'https://res.cloudinary.com/dxgckfhti/image/upload/v1768654110/testimonial_3_cvknr0.png',
+      'https://res.cloudinary.com/dxgckfhti/image/upload/w_80/v1768654110/testimonial_3_cvknr0.png',
     rating: 4.5,
     createdAt: new Date().toISOString(),
   },
@@ -967,7 +967,7 @@ export const testimonials = [
     designation: 'General Manager - Sales - Carrier Midea India Pvt. Ltd',
     // image: '/images/testimonials/testimonial_4.png',
     image:
-      'https://res.cloudinary.com/dxgckfhti/image/upload/v1768654110/testimonial_4_a26ups.png',
+      'https://res.cloudinary.com/dxgckfhti/image/upload/w_80/v1768654110/testimonial_4_a26ups.png',
     rating: 4.5,
     createdAt: new Date().toISOString(),
   },
@@ -978,7 +978,7 @@ export const testimonials = [
     designation: 'Int. Medicine - Ponmalligai Hospital, chennai',
     // image: '/images/testimonials/testimonial_5.jpg',
     image:
-      'https://res.cloudinary.com/dxgckfhti/image/upload/v1768654110/testimonial_5_rdx8ko.jpg',
+      'https://res.cloudinary.com/dxgckfhti/image/upload/w_80/v1768654110/testimonial_5_rdx8ko.jpg',
     rating: 4.5,
     createdAt: new Date().toISOString(),
   },
@@ -989,7 +989,7 @@ export const testimonials = [
     designation: 'N/A, New Delhi',
     // image: '/images/testimonials/testimonial_6.jpg',
     image:
-      'https://res.cloudinary.com/dxgckfhti/image/upload/v1768654111/testimonial_6_vfwruf.jpg',
+      'https://res.cloudinary.com/dxgckfhti/image/upload/w_80/v1768654111/testimonial_6_vfwruf.jpg',
     rating: 4.5,
     createdAt: new Date().toISOString(),
   },
@@ -1000,7 +1000,7 @@ export const testimonials = [
     designation: 'Retd. Sr. VP - Mercantile Credit Corporation',
     // image: '/images/testimonials/testimonial_7.jpg',
     image:
-      'https://res.cloudinary.com/dxgckfhti/image/upload/v1768654110/testimonial_7_bpgn8t.jpg',
+      'https://res.cloudinary.com/dxgckfhti/image/upload/w_80/v1768654110/testimonial_7_bpgn8t.jpg',
     rating: 4.5,
     createdAt: new Date().toISOString(),
   },
@@ -1622,3 +1622,93 @@ export const googleReviews = [
     createdAt: '18 Jun 2024',
   },
 ];
+
+// forms
+export const ageGroups = ['20-30', '31-40', '41-50', '51+'] as const;
+
+export const employmentStatuses = [
+  'Self-Employed',
+  'Employee',
+  'Retired',
+  'Student',
+  'Home Maker',
+  'Others',
+] as const;
+
+export const householdIncomes = [
+  'Less than Rs.10 Lacs',
+  'Rs.10 Lacs - Rs.20 Lacs',
+  'Rs.20Lacs - Rs.50 Lacs',
+  'More than Rs.50 Lacs',
+] as const;
+
+export const incomeStatues = [
+  'Unstable',
+  'Somewhat stable',
+  'Reasonably stable',
+] as const;
+
+export const liquidNetWorths = [
+  'Your liquid net worth is defined as the sum of (a) your investment assets (including balances with bank and investments but exclude your home and businesses that you own) minus - (b) your total of any loans that you have',
+  'Upto Rs. 5 Lacs',
+  'Rs. 5 Lacs - Rs. 25 Lacs',
+  'Rs. 25 Lacs - Rs. 1 Crore',
+  'Rs. 1 Crore and above',
+] as const;
+
+export const loanStatuses = [
+  'I am comfortable with my loan / EMI',
+  'I am little uncomfortable with my loan / EMI',
+  'I have no loans outstanding',
+] as const;
+
+export const knowledegsAboutInvestments = [
+  'Disagree',
+  'Somewhat agree',
+  'Strongly agree',
+] as const;
+
+export const investmentObjectives = [
+  'Maximise long-term investment returns',
+  'Balance risk and return',
+  'Protect the value of my investment',
+] as const;
+
+export const investmentDurations = [
+  'Less than 3 to 5 years',
+  'More than 5 years',
+  'No definable time horizon',
+] as const;
+
+export const investedInstruments = [
+  'Bank Fixed Deposits/ Bonds / NCDs',
+  'Life / Health / General Insurance',
+  'Mutual Funds',
+  'Equity / PMS / MLDs',
+] as const;
+
+export const investmentPlansRanges = [
+  '12.00%, 25.00%, -18.00%',
+  '10.00%, 15.00%, -7.00%',
+  '8.00%, 12.00%, -4.00%',
+  '6.00%, 8.00%, -1.00%',
+] as const;
+
+export const investmentRisks = [
+  'Conservative: I do not want to risk any capital or have any negative return, even if it is temporary.',
+  'Moderate: Over short-term investment horizon, I can only risk upto 10% of my capital.',
+  "Situational: I don't want risk on my short term investments. However, I am willing to take higher risk for my long term investments.",
+  'Aggressive: I can risk more than 25% of my capital for potentially higher returns.',
+] as const;
+
+export const marketMovements = [
+  'I will sell the investments immediately.',
+  'I will remain invested till the markets turn favourable.',
+  'I will invest more during such period.',
+] as const;
+
+export const riskProfiles = [
+  'Should be treated the same as me.',
+  'If any different, I will discus with you at the time of investment.',
+  'Will be different for every member.',
+] as const;

@@ -13,8 +13,8 @@ export default function Planning() {
           empower your decisions and bring your aspirations to life.
         </p>
         <div className='mt-8 md:mt-16 w-full mx-auto space-y-20'>
-          {plannings.map((plan) => (
-            <PlanningCard key={plan.category} plan={plan} />
+          {plannings.map((plan, idx) => (
+            <PlanningCard key={plan.category} plan={plan} idx={idx} />
           ))}
         </div>
       </div>

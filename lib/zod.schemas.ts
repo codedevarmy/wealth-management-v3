@@ -1,4 +1,20 @@
-import { consultationTypes } from '@/constants';
+import {
+  ageGroups,
+  consultationTypes,
+  employmentStatuses,
+  householdIncomes,
+  incomeStatues,
+  investedInstruments,
+  investmentDurations,
+  investmentObjectives,
+  investmentPlansRanges,
+  investmentRisks,
+  knowledegsAboutInvestments,
+  liquidNetWorths,
+  loanStatuses,
+  marketMovements,
+  riskProfiles,
+} from '@/constants';
 import { z } from 'zod';
 
 export const contactFormSchema = z.object({
@@ -27,7 +43,7 @@ export const consultationSchema = z.object({
   householdExpenses: z.string().min(1, 'Household expenses is required'),
   consultationType: z.enum(
     consultationTypes,
-    'Please select a consultation type'
+    'Please select a consultation type',
   ),
   specifyReason: z
     .string()
@@ -164,6 +180,53 @@ export const vacationSchema = commonCalculatorSchema
 export const emailFormSchema = z.object({
   email: z.email('Invalid email address'),
 });
+
+export const riskProfileSchema = contactFormSchema
+  .pick({
+    firstName: true,
+    lastName: true,
+    email: true,
+  })
+  .extend({
+    mobile: z
+      .string()
+      .regex(/^\+?[1-9]\d{1,14}$/, 'Invalid mobile number')
+      .min(10, 'Invalid mobile number'),
+    age: z.enum(ageGroups, 'Invalid age group'),
+    employmentStatus: z.enum(employmentStatuses, 'Invalid employment status'),
+    householdIncome: z.enum(householdIncomes, 'Invalid household income'),
+    incomeStatus: z.enum(incomeStatues, 'Invalid income status'),
+    liquidNetWorth: z.enum(liquidNetWorths, 'Invalid liquid net worth'),
+    loanStatus: z.enum(loanStatuses, 'Invalid loan status'),
+    knowledgeAboutInvestments: z.enum(
+      knowledegsAboutInvestments,
+      'Invalid knowledge about investments',
+    ),
+    investmentObjective: z.enum(
+      investmentObjectives,
+      'Invalid investment objective',
+    ),
+    investmentDuration: z.enum(
+      investmentDurations,
+      'Invalid investment duration',
+    ),
+    investedInstrument: z.enum(
+      investedInstruments,
+      'Invalid invested instruments',
+    ),
+    investmentPlansRange: z.enum(
+      investmentPlansRanges,
+      'Invalid investment plans range',
+    ),
+    investmentRisk: z.enum(investmentRisks, 'Invalid investment risk'),
+    marketMovement: z.enum(marketMovements, 'Invalid market movement'),
+    riskProfile: z.enum(riskProfiles, 'Invalid risk profile'),
+    agreeToTerms: z.boolean().refine((val) => val === true, {
+      message: 'You must agree to the terms and conditions',
+    }),
+  });
+
+export type RiskProfileFormValues = z.infer<typeof riskProfileSchema>;
 
 export type CommonCalculatorValues = z.infer<typeof commonCalculatorSchema>;
 
