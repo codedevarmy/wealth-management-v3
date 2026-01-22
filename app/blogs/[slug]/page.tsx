@@ -17,7 +17,7 @@ type PageProps = {
 
 export async function generateMetadata(
   { params }: PageProps,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   // read route params
   const slug = (await params).slug;
@@ -46,7 +46,7 @@ export async function generateMetadata(
       description: post.summary,
       images: [
         {
-          url: `${process.env.NEXT_PUBLIC_BASE_URL}/${post.image}`,
+          url: `${post.image}`,
           width: 1200,
           height: 630,
           alt: 'Ascent Wealth',
