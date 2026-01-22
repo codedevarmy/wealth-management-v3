@@ -1,5 +1,19 @@
 'use client';
 
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useFormPersist } from '@liorpo/react-hook-form-persist';
+import { ArrowUpRight } from 'lucide-react';
+import { VisuallyHidden } from 'radix-ui';
+import { useState, useTransition } from 'react';
+import {
+  FormProvider,
+  useForm,
+  type SubmitErrorHandler,
+  type SubmitHandler,
+} from 'react-hook-form';
+import { toast } from 'sonner';
+
+import { Button } from '@/components/ui/button';
 import {
   Dialog,
   DialogClose,
@@ -10,25 +24,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import { sendEmail } from '@/lib/resend';
 import {
   consultationSchema,
   type ConsultationFormValues,
 } from '@/lib/zod.schemas';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { ArrowUpRight } from 'lucide-react';
-import { VisuallyHidden } from 'radix-ui';
-import { useState } from 'react';
-import {
-  FormProvider,
-  useForm,
-  type SubmitErrorHandler,
-  type SubmitHandler,
-} from 'react-hook-form';
-import { Button } from '../ui/button';
+import { Spinner } from '../ui/spinner';
 import ConsultationForm from './consultation-form';
 
 export default function ConsultationDialog() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isPending, startTransition] = useTransition();
 
   const form = useForm<ConsultationFormValues>({
     resolver: zodResolver(consultationSchema),
@@ -38,7 +44,7 @@ export default function ConsultationDialog() {
       phone: '',
       householdExpenses: '',
       consultationType: undefined,
-      specifyReason: '',
+      specifyReason: undefined,
       age: '',
       spouseAge: '',
       firstChildAge: '',
@@ -49,19 +55,74 @@ export default function ConsultationDialog() {
     },
   });
 
+  const { clear } = useFormPersist('consultation-form', {
+    control: form.control,
+    setValue: form.setValue,
+    storage: sessionStorage, // Use sessionStorage instead of localStorage
+    validate: true, // Trigger validation when data is restored
+    dirty: true, // Mark form as dirty
+    touch: true, // Mark fields as touched
+    debounceDelay: 300, // Save after 300ms of inactivity
+    // onDataRestored: () => {
+    //   toast.success('Restored your previous consultation data!', {
+    //     description: 'You can continue where you left off.',
+    //     position: 'bottom-left',
+    //   });
+    // },
+    onTimeout: () => {
+      toast.error('Previous consultation was data expired!', {
+        description: 'The saved data was older than 24 hours.',
+        position: 'bottom-left',
+      });
+    },
+    timeout: 1000 * 60 * 60 * 24, // 24 hours
+  });
+
   function toggleDialog() {
     setIsOpen((prev) => !prev);
   }
 
   const onError: SubmitErrorHandler<ConsultationFormValues> = (errors) => {
-    console.log('Form errors:', errors);
+    // console.log('Form errors:', errors);
+    Object.values(errors).forEach((error) => {
+      toast.error('Form Error', {
+        description: error.message,
+      });
+    });
   };
 
-  const onSubmit: SubmitHandler<ConsultationFormValues> = (data) => {
-    console.log('Form submitted successfully:', data);
+  const onSubmit: SubmitHandler<ConsultationFormValues> = (values) => {
+    // console.log('Form submitted successfully:', values);
 
-    // Close the dialog upon successful submission
-    toggleDialog();
+    startTransition(async () => {
+      // await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate async operation
+
+      const result = await sendEmail({
+        type: 'consultation-form',
+        to: values.email,
+        data: values,
+      });
+
+      if (!result) {
+        toast.error(
+          'Failed to submit consultation request. Please try again later.',
+        );
+        toggleDialog();
+        return;
+      }
+
+      toast.success('Consultation request submitted!', {
+        description:
+          'Thank you for reaching out. We will get back to you shortly.',
+        duration: 8000,
+      });
+
+      clear(); // Clear the persisted form data upon successful submission
+      form.reset(); // Reset the form fields
+
+      // Close the dialog upon successful submission
+      toggleDialog();
+    });
   };
 
   return (
@@ -94,9 +155,19 @@ export default function ConsultationDialog() {
 
             <DialogFooter>
               <DialogClose asChild>
-                <Button variant='outline'>Cancel</Button>
+                <Button variant='outline' size={'sm'} disabled={isPending}>
+                  Cancel
+                </Button>
               </DialogClose>
-              <Button type='submit'>Submit Consultation Request</Button>
+              <Button type='submit' size={'sm'} disabled={isPending}>
+                {isPending ? (
+                  <span className={'inline-flex items-center gap-2'}>
+                    Submitting... <Spinner />
+                  </span>
+                ) : (
+                  <span>Submit Consultation</span>
+                )}
+              </Button>
             </DialogFooter>
           </form>
         </DialogContent>

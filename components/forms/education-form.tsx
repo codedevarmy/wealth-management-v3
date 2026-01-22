@@ -16,9 +16,9 @@ import {
   type EducationCalculatorValues,
 } from '@/lib/zod.schemas';
 
-import { Button } from '../ui/button';
-import { DialogClose, DialogFooter } from '../ui/dialog';
-import { DrawerClose, DrawerFooter } from '../ui/drawer';
+import { Button } from '@/components/ui/button';
+import { DialogClose, DialogFooter } from '@/components/ui/dialog';
+import { DrawerClose, DrawerFooter } from '@/components/ui/drawer';
 import {
   Field,
   FieldDescription,
@@ -28,18 +28,18 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-} from '../ui/field';
-import { Input } from '../ui/input';
-import { ScrollArea } from '../ui/scroll-area';
-import { Separator } from '../ui/separator';
-import { Slider } from '../ui/slider';
+} from '@/components/ui/field';
+import { Input } from '@/components/ui/input';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Separator } from '@/components/ui/separator';
+import { Slider } from '@/components/ui/slider';
 
 type EducationFormProps = {
   title: string;
   desc: string;
   onParentClose: Dispatch<SetStateAction<boolean>>;
   onOpenEmail: Dispatch<SetStateAction<boolean>>;
-  onUpdateSessionKey: Dispatch<SetStateAction<string>>;
+  onUpdateSessionKey: Dispatch<SetStateAction<SessionKey | undefined>>;
 };
 
 export default function EducationForm(props: EducationFormProps) {
@@ -96,12 +96,12 @@ export default function EducationForm(props: EducationFormProps) {
     });
   };
 
-  const onSubmit: SubmitHandler<EducationCalculatorValues> = (data) => {
-    // console.log('Form data:', data);
-    toast.success(<pre>{`${JSON.stringify(data, null, 2)}`}</pre>, {
-      description: 'Education calculation submitted successfully!',
-      position: 'bottom-right',
-    });
+  const onSubmit: SubmitHandler<EducationCalculatorValues> = () => {
+    // console.log('Form data:', values);
+    // toast.success(<pre>{`${JSON.stringify(values, null, 2)}`}</pre>, {
+    //   description: 'Education calculation submitted successfully!',
+    //   position: 'bottom-right',
+    // });
     onOpenEmail(true); // open next dialog
     onParentClose(false); // close the calculator modal
     onUpdateSessionKey('education-form');

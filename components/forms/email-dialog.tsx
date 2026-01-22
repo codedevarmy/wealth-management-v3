@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useTransition } from 'react';
 import {
   Controller,
   SubmitErrorHandler,
@@ -25,18 +25,23 @@ import {
   FieldLabel,
 } from '@/components/ui/field';
 import { Input } from '@/components/ui/input';
+import { Spinner } from '@/components/ui/spinner';
 import { useGetSessionStorage } from '@/hooks/use-session-storage';
+import { sendEmail } from '@/lib/resend';
 import { emailFormSchema, EmailFormValues } from '@/lib/zod.schemas';
 
 type EmailDialogProps = {
-  emailDialog: boolean;
+  isEmailDialogOpen: boolean;
   onCloseEmailDialog: Dispatch<SetStateAction<boolean>>;
-  sessionStorageKey: string;
+  sessionStorageKey: SessionKey | undefined;
 };
 
-const wait = () => new Promise((resolve) => setTimeout(resolve, 1000));
+// const wait = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
 export default function EmailDialog(props: EmailDialogProps) {
+  const { isEmailDialogOpen, onCloseEmailDialog, sessionStorageKey } = props;
+  const [isPending, startTransition] = useTransition();
+
   const form = useForm<EmailFormValues>({
     resolver: zodResolver(emailFormSchema),
     defaultValues: {
@@ -45,12 +50,7 @@ export default function EmailDialog(props: EmailDialogProps) {
     mode: 'onChange',
   });
 
-  const storageKey =
-    props.sessionStorageKey.length > 0
-      ? `react-hook-form-persist:${props.sessionStorageKey}`
-      : 'default-email-form';
-
-  const storedValues = useGetSessionStorage(storageKey);
+  const storedValues = useGetSessionStorage(sessionStorageKey);
 
   const onError: SubmitErrorHandler<EmailFormValues> = (errors) => {
     // console.log('Form errors:', errors);
@@ -62,20 +62,49 @@ export default function EmailDialog(props: EmailDialogProps) {
     });
   };
 
-  const onSubmit: SubmitHandler<EmailFormValues> = (data) => {
-    // console.log('Form data:', data);
-    toast.success(<pre>{`${JSON.stringify(data, null, 2)}`}</pre>, {
-      description: 'Email submitted successfully!',
-      position: 'bottom-right',
+  const onSubmit: SubmitHandler<EmailFormValues> = (values) => {
+    // console.log('Form data:', values);
+    // toast.success(<pre>{`${JSON.stringify(values, null, 2)}`}</pre>, {
+    //   description: 'Email submitted successfully!',
+    //   position: 'bottom-right',
+    // });
+
+    if (!storedValues || !sessionStorageKey) {
+      toast.error('No calculation data found to send.', {
+        description: 'Please complete the calculation form first.',
+      });
+      return;
+    }
+
+    startTransition(async () => {
+      // await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate async operation
+
+      const result = await sendEmail({
+        type: sessionStorageKey,
+        to: values.email,
+        data: storedValues,
+      });
+
+      if (!result) {
+        toast.error('Failed to send email.', {
+          description: 'Please try again later.',
+        });
+        return;
+      }
+
+      toast.success('Email submitted!', {
+        description: 'Thank you! We will be in touch soon.',
+        duration: 8000,
+      });
+      onCloseEmailDialog(false);
+      form.reset();
     });
 
-    wait().then(() => props.onCloseEmailDialog(false));
+    // wait().then(() => onCloseEmailDialog(false));
   };
 
   return (
-    <AlertDialog
-      open={props.emailDialog}
-      onOpenChange={props.onCloseEmailDialog}>
+    <AlertDialog open={isEmailDialogOpen} onOpenChange={onCloseEmailDialog}>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>
@@ -89,11 +118,11 @@ export default function EmailDialog(props: EmailDialogProps) {
           className={'space-y-4'}
           onSubmit={form.handleSubmit(onSubmit, onError)}>
           <div className='grid gap-4'>
-            {JSON.stringify(storedValues) !== '{}' && storedValues ? (
-              <pre className='p-4 mb-4 overflow-x-auto text-sm bg-gray-100 rounded-md'>
+            {/* {JSON.stringify(storedValues) !== '{}' && storedValues ? (
+              <pre className='p-4 mb-4 overflow-x-auto text-sm bg-background rounded-md'>
                 {JSON.stringify(storedValues, null, 2)}
               </pre>
-            ) : null}
+            ) : null} */}
             <Controller
               name='email'
               control={form.control}
@@ -119,12 +148,26 @@ export default function EmailDialog(props: EmailDialogProps) {
           </div>
           <AlertDialogFooter>
             <AlertDialogCancel asChild>
-              <Button variant={'outline'} size={'sm'} type='button'>
+              <Button
+                variant={'outline'}
+                size={'sm'}
+                type='button'
+                disabled={isPending}>
                 Cancel
               </Button>
             </AlertDialogCancel>
 
-            <Button type='submit'>Continue</Button>
+            <Button type='submit'>
+              {isPending ? (
+                <span className={'inline-flex items-center gap-2'}>
+                  Submitting... <Spinner />
+                </span>
+              ) : (
+                <span className={'inline-flex items-center gap-2'}>
+                  Continue
+                </span>
+              )}
+            </Button>
           </AlertDialogFooter>
         </form>
       </AlertDialogContent>

@@ -34,7 +34,7 @@ type LumpsumFormProps = {
   desc: string;
   onParentClose: Dispatch<SetStateAction<boolean>>;
   onOpenEmail: Dispatch<SetStateAction<boolean>>;
-  onUpdateSessionKey: Dispatch<SetStateAction<string>>;
+  onUpdateSessionKey: Dispatch<SetStateAction<SessionKey | undefined>>;
 };
 
 export default function LumpsumForm(props: LumpsumFormProps) {

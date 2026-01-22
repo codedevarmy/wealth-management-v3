@@ -35,12 +35,12 @@ type CaclculatorDrawerDialogProps = {
 };
 
 export default function CaclculatorDrawerDialog(
-  props: CaclculatorDrawerDialogProps
+  props: CaclculatorDrawerDialogProps,
 ) {
   const { title, desc } = props;
   const [open, setOpen] = useState(false);
-  const [emailDialogOpen, setEmailDialogOpen] = useState(false);
-  const [sessionStorageKey, setSessionStorageKey] = useState('');
+  const [isEmailDialogOpen, setIsEmailDialogOpen] = useState(false);
+  const [sessionStorageKey, setSessionStorageKey] = useState<SessionKey>();
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
   const animation = {
@@ -71,7 +71,7 @@ export default function CaclculatorDrawerDialog(
             {title === 'Education Calculator' && (
               <EducationForm
                 onParentClose={setOpen}
-                onOpenEmail={setEmailDialogOpen}
+                onOpenEmail={setIsEmailDialogOpen}
                 onUpdateSessionKey={setSessionStorageKey}
                 {...props}
               />
@@ -79,7 +79,7 @@ export default function CaclculatorDrawerDialog(
             {title === 'Lumpsum Calculator' && (
               <LumpsumForm
                 onParentClose={setOpen}
-                onOpenEmail={setEmailDialogOpen}
+                onOpenEmail={setIsEmailDialogOpen}
                 onUpdateSessionKey={setSessionStorageKey}
                 {...props}
               />
@@ -87,7 +87,7 @@ export default function CaclculatorDrawerDialog(
             {title === 'SIP Calculator' && (
               <SIPForm
                 onParentClose={setOpen}
-                onOpenEmail={setEmailDialogOpen}
+                onOpenEmail={setIsEmailDialogOpen}
                 onUpdateSessionKey={setSessionStorageKey}
                 {...props}
               />
@@ -95,7 +95,7 @@ export default function CaclculatorDrawerDialog(
             {title === 'Retirement Planning' && (
               <RetirementForm
                 onParentClose={setOpen}
-                onOpenEmail={setEmailDialogOpen}
+                onOpenEmail={setIsEmailDialogOpen}
                 onUpdateSessionKey={setSessionStorageKey}
                 {...props}
               />
@@ -103,7 +103,7 @@ export default function CaclculatorDrawerDialog(
             {title === 'Wedding Calculator' && (
               <WeddingForm
                 onParentClose={setOpen}
-                onOpenEmail={setEmailDialogOpen}
+                onOpenEmail={setIsEmailDialogOpen}
                 onUpdateSessionKey={setSessionStorageKey}
                 {...props}
               />
@@ -111,7 +111,7 @@ export default function CaclculatorDrawerDialog(
             {title === 'Vacation Calculator' && (
               <VacationForm
                 onParentClose={setOpen}
-                onOpenEmail={setEmailDialogOpen}
+                onOpenEmail={setIsEmailDialogOpen}
                 onUpdateSessionKey={setSessionStorageKey}
                 {...props}
               />
@@ -119,8 +119,8 @@ export default function CaclculatorDrawerDialog(
           </DialogContent>
         </Dialog>
         <EmailDialog
-          emailDialog={emailDialogOpen}
-          onCloseEmailDialog={setEmailDialogOpen}
+          isEmailDialogOpen={isEmailDialogOpen}
+          onCloseEmailDialog={setIsEmailDialogOpen}
           sessionStorageKey={sessionStorageKey}
         />
       </>
@@ -144,7 +144,7 @@ export default function CaclculatorDrawerDialog(
           {title === 'Education Calculator' && (
             <EducationForm
               onParentClose={setOpen}
-              onOpenEmail={setEmailDialogOpen}
+              onOpenEmail={setIsEmailDialogOpen}
               onUpdateSessionKey={setSessionStorageKey}
               {...props}
             />
@@ -152,7 +152,7 @@ export default function CaclculatorDrawerDialog(
           {title === 'Lumpsum Calculator' && (
             <LumpsumForm
               onParentClose={setOpen}
-              onOpenEmail={setEmailDialogOpen}
+              onOpenEmail={setIsEmailDialogOpen}
               onUpdateSessionKey={setSessionStorageKey}
               {...props}
             />
@@ -160,7 +160,7 @@ export default function CaclculatorDrawerDialog(
           {title === 'SIP Calculator' && (
             <SIPForm
               onParentClose={setOpen}
-              onOpenEmail={setEmailDialogOpen}
+              onOpenEmail={setIsEmailDialogOpen}
               onUpdateSessionKey={setSessionStorageKey}
               {...props}
             />
@@ -168,7 +168,7 @@ export default function CaclculatorDrawerDialog(
           {title === 'Retirement Planning' && (
             <RetirementForm
               onParentClose={setOpen}
-              onOpenEmail={setEmailDialogOpen}
+              onOpenEmail={setIsEmailDialogOpen}
               onUpdateSessionKey={setSessionStorageKey}
               {...props}
             />
@@ -176,7 +176,7 @@ export default function CaclculatorDrawerDialog(
           {title === 'Wedding Calculator' && (
             <WeddingForm
               onParentClose={setOpen}
-              onOpenEmail={setEmailDialogOpen}
+              onOpenEmail={setIsEmailDialogOpen}
               onUpdateSessionKey={setSessionStorageKey}
               {...props}
             />
@@ -184,7 +184,7 @@ export default function CaclculatorDrawerDialog(
           {title === 'Vacation Calculator' && (
             <VacationForm
               onParentClose={setOpen}
-              onOpenEmail={setEmailDialogOpen}
+              onOpenEmail={setIsEmailDialogOpen}
               onUpdateSessionKey={setSessionStorageKey}
               {...props}
             />
@@ -192,8 +192,8 @@ export default function CaclculatorDrawerDialog(
         </DrawerContent>
       </Drawer>
       <EmailDialog
-        emailDialog={emailDialogOpen}
-        onCloseEmailDialog={setEmailDialogOpen}
+        isEmailDialogOpen={isEmailDialogOpen}
+        onCloseEmailDialog={setIsEmailDialogOpen}
         sessionStorageKey={sessionStorageKey}
       />
     </>

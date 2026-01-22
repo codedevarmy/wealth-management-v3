@@ -1,7 +1,12 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useFormPersist } from '@liorpo/react-hook-form-persist';
 import { ArrowRightIcon, ChevronLeftIcon } from 'lucide-react';
-import { SubmitErrorHandler, SubmitHandler, useForm } from 'react-hook-form';
+import { useState, useTransition } from 'react';
+import {
+  type SubmitErrorHandler,
+  type SubmitHandler,
+  useForm,
+} from 'react-hook-form';
 import { toast } from 'sonner';
 
 import { Button } from '@/components/ui/button';
@@ -17,10 +22,15 @@ import {
 } from '@/components/ui/dialog';
 import { Form } from '@/components/ui/form';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { Spinner } from '@/components/ui/spinner';
+import { sendEmail } from '@/lib/resend';
 import { RiskProfileFormValues, riskProfileSchema } from '@/lib/zod.schemas';
 import RiskProfileForm from './risk-profile-form';
 
 export default function RiskProfileDialog() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isPending, startTransition] = useTransition();
+
   const form = useForm<RiskProfileFormValues>({
     resolver: zodResolver(riskProfileSchema),
     defaultValues: {
@@ -47,7 +57,7 @@ export default function RiskProfileDialog() {
     mode: 'onChange',
   });
 
-  useFormPersist('risk-profile-form', {
+  const { clear } = useFormPersist('risk-profile-form', {
     control: form.control,
     setValue: form.setValue,
     storage: sessionStorage, // Use sessionStorage instead of localStorage
@@ -55,12 +65,12 @@ export default function RiskProfileDialog() {
     dirty: true, // Mark form as dirty
     touch: true, // Mark fields as touched
     debounceDelay: 300, // Save after 300ms of inactivity
-    onDataRestored: () => {
-      toast.success('Restored your previous assess data!', {
-        description: 'You can continue where you left off.',
-        position: 'bottom-left',
-      });
-    },
+    // onDataRestored: () => {
+    //   toast.success('Restored your previous assess data!', {
+    //     description: 'You can continue where you left off.',
+    //     position: 'bottom-left',
+    //   });
+    // },
     onTimeout: () => {
       toast.error('Previous assess was data expired!', {
         description: 'The saved data was older than 24 hours.',
@@ -69,6 +79,10 @@ export default function RiskProfileDialog() {
     },
     timeout: 1000 * 60 * 60 * 24, // 24 hours
   });
+
+  function toggleDialog() {
+    setIsOpen((prev) => !prev);
+  }
 
   const onError: SubmitErrorHandler<RiskProfileFormValues> = (errors) => {
     // console.log('Form errors:', errors);
@@ -83,19 +97,38 @@ export default function RiskProfileDialog() {
 
   const onSubmit: SubmitHandler<RiskProfileFormValues> = (values) => {
     // console.log('Form data:', values);
-    toast.success(
-      <pre className={'overflow-x-scroll p-2 bg-accent w-sm'}>
-        {JSON.stringify(values, null, 2)}
-      </pre>,
-      {
+
+    startTransition(async () => {
+      // await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate async operation
+
+      const result = await sendEmail({
+        type: 'risk-profile-form',
+        to: values.email,
+        data: values,
+      });
+
+      if (!result) {
+        toast.error(
+          'Failed to start risk profile assessment. Please try again later.',
+        );
+        toggleDialog();
+        return;
+      }
+
+      toast.success('Risk profile assessment started!', {
+        description:
+          'Thank you for starting the risk profile assessment. We will guide you through the process.',
         duration: 8000,
-        description: 'Form submitted successfully!',
-      },
-    );
+      });
+      clear(); // Clear the persisted form data upon successful submission
+      form.reset(); // Reset the form fields
+
+      toggleDialog();
+    });
   };
 
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={toggleDialog}>
       <DialogTrigger asChild>
         <Button size='lg' className='mt-6 rounded-full gap-3'>
           Assess Your Risk Profile <ArrowRightIcon />
@@ -129,13 +162,26 @@ export default function RiskProfileDialog() {
                   size={'sm'}
                   type='reset'
                   variant='outline'
-                  onClick={() => form.reset()}>
+                  disabled={isPending}
+                  onClick={() => {
+                    form.reset();
+                    clear();
+                  }}>
                   <ChevronLeftIcon />
                   Back
                 </Button>
               </DialogClose>
-              <Button type='submit' size={'sm'}>
-                Start Assessment
+              <Button type='submit' size={'sm'} disabled={isPending}>
+                {isPending ? (
+                  <span className={'inline-flex items-center gap-2'}>
+                    Submitting... <Spinner />
+                  </span>
+                ) : (
+                  <span className={'inline-flex items-center gap-2'}>
+                    Start Assessment
+                    <ArrowRightIcon />
+                  </span>
+                )}
               </Button>
             </DialogFooter>
           </form>

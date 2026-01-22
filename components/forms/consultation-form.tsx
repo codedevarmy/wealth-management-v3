@@ -169,6 +169,7 @@ export default function ConsultationForm() {
                           setIsVisible(true);
                         } else {
                           setIsVisible(false);
+                          form.setValue('specifyReason', undefined);
                         }
                       }}
                       value={field.value}>
@@ -184,7 +185,7 @@ export default function ConsultationForm() {
                               .split('-')
                               .map(
                                 (word) =>
-                                  word.charAt(0).toUpperCase() + word.slice(1)
+                                  word.charAt(0).toUpperCase() + word.slice(1),
                               )
                               .join(' ')}
                           </SelectItem>
