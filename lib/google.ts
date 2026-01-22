@@ -133,6 +133,11 @@ export async function exchangeCodeForTokens(
  */
 export async function refreshAccessToken(): Promise<string> {
   if (!GOOGLE_CLIENT_ID || !GOOGLE_CLIENT_SECRET || !REFRESH_TOKEN) {
+    console.log('Missing env vars:', {
+      GOOGLE_CLIENT_ID,
+      GOOGLE_CLIENT_SECRET,
+      REFRESH_TOKEN,
+    });
     throw new Error('Missing Google OAuth environment variables for refresh');
   }
   const params = new URLSearchParams({
